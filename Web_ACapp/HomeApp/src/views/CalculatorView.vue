@@ -12,13 +12,7 @@ const message = ref('')
     
 </template>
 
-<script>
-export default {
 
-}
-const showQuote = ref(false)
-;
-</script>
 <style scoped>
 form {
     margin-top: 2rem;

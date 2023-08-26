@@ -19,15 +19,16 @@ const message = ref('')
             <input type="number" placeholder="video doorbell" v-model="doorbells" />
         </div>
         <div>
-            <button @click="showQuote = true, showCalculator = false" type="submit" > Calculate Cost</button>
+            <button @click="showQuote = true" type="submit" > Calculate Cost</button>
         </div>
     </form >
-    <QuoteComponent v-if="showQuote"/>
+    <div v-if="showQuote" > HI </div>
 </template>
 
 <script>
 const showQuote = ref(false)
 const showCalculator = ref(true)
+
 
 import axios from 'axios';
 export default {
