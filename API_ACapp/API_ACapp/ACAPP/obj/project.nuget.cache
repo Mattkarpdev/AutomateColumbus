@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+K6m8Enq13Vsu8VmjPx85UAlGaPbLKizs7xmvm6xBQMqMiaIHw2QzlgzPLipdwNYVpqTDQqb68hLxlQ48gzJjQ==",
+  "dgSpecHash": "tzFROK2Z9Re3SFU9ftXNRQrEiWbgn4vE0jixZeLNlLL1RZNjzO5Opn4k7ie4s5haGBL8GZj7hpZGHxtv2MoW2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Wizar\\source\\repos\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
+  "projectFilePath": "C:\\Users\\Wizar\\source\\repos\\InstallationQuoteCalculator\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wizar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Wizar\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

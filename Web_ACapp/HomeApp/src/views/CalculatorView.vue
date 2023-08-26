@@ -1,62 +1,23 @@
 <script setup>
 import { ref } from 'vue'
+import CalculatorComponent from '../components/CalculatorComponent.vue'
 
 const message = ref('')
 </script>
 
 <template>
-    <form @submit.prevent="postUserInput">
-        <div>
-            <label>Windows: </label>
-            <input type="number" placeholder="number of windows" v-model="windows" />
-        </div>
-        <div>
-            <label>Doors: </label>
-            <input type="number" placeholder="number of doors" v-model="doors" />
-        </div>
-        <div>
-            <label>Video Doorbell: </label>
-            <input type="number" placeholder="video doorbell" v-model="doorbells" />
-        </div>
-        <div>
-            <button type="submit"> Calculate Cost</button>
-        </div>
-    </form>
+    <div>
+        <CalculatorComponent />
+    </div>
+    
 </template>
 
 <script>
-import axios from 'axios';
 export default {
-    data() {
-        return {
 
-            inputId: 0,
-            date: "2023-08-23T21:32:12.399Z",
-            email: "string",
-            phoneNumber: "string",
-            name: "string",
-            num_windows: 0,
-            num_doors: 0,
-            video_doorbell: 0,
-            cost: this.num_doors + this.num_windows + this.video_doorbell
-
-        }
-
-    },
-    methods: {
-        postUserInput() {
-            axios.post('https://localhost:7287/api/UserInputs',
-                {
-                    num_windows: this.windows,
-                    num_doors: this.doors,
-                    video_doorbell: this.doorbells,
-                    date: this.date
-                    
-                }
-            ).then(response => { console.log(response) })
-        }
-    }
-};
+}
+const showQuote = ref(false)
+;
 </script>
 <style scoped>
 form {

@@ -11924,11 +11924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wizar\\source\\repos\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
+      "projectUniqueName": "C:\\Users\\Wizar\\source\\repos\\InstallationQuoteCalculator\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
       "projectName": "ACAPP",
-      "projectPath": "C:\\Users\\Wizar\\source\\repos\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
+      "projectPath": "C:\\Users\\Wizar\\source\\repos\\InstallationQuoteCalculator\\API_ACapp\\API_ACapp\\ACAPP\\ACAPP.csproj",
       "packagesPath": "C:\\Users\\Wizar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wizar\\source\\repos\\API_ACapp\\API_ACapp\\ACAPP\\obj\\",
+      "outputPath": "C:\\Users\\Wizar\\source\\repos\\InstallationQuoteCalculator\\API_ACapp\\API_ACapp\\ACAPP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wizar\\AppData\\Roaming\\NuGet\\NuGet.Config",
