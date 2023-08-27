@@ -54,8 +54,8 @@ export default {
                     num_windows: this.windows,
                     num_doors: this.doors,
                     video_doorbell: this.doorbells,
-                    date: this.date
-                    
+                    date: this.date,
+                    cost: this.cost
                 }
             ).then(response => { console.log(response) })
         }
