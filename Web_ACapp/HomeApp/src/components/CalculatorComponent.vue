@@ -19,31 +19,36 @@ const message = ref('')
             <input type="number" placeholder="video doorbell" v-model="doorbells" />
         </div>
         <div>
-            <button @click="showQuote = true" type="submit" > Calculate Cost</button>
+            <button @click="showQuote = true" type="submit"> Calculate Cost</button>
         </div>
-    </form >
-    <div v-if="showQuote" > HI </div>
+    </form>
+
+    <div > 
+        <selfId>hi</selfId>
+    </div>
 </template>
 
 <script>
-const showQuote = ref(false)
+
 const showCalculator = ref(true)
-
-
+const showQuote = ref(false)
+let selfId = this
 import axios from 'axios';
 export default {
     data() {
         return {
-
-            inputId: 0,
-            date: "2023-08-23T21:32:12.399Z",
-            email: "string",
-            phoneNumber: "string",
-            name: "string",
-            num_windows: 0,
-            num_doors: 0,
-            video_doorbell: 0,
-            cost: 1
+            userInput:
+            {
+                input_Id: 0,
+                date: "2023-08-23T21:32:12.399Z",
+                email: "string",
+                phoneNumber: "string",
+                name: "string",
+                num_windows: 0,
+                num_doors: 0,
+                video_doorbell: 0,
+                cost: 1
+            }
         }
 
     },
@@ -57,7 +62,16 @@ export default {
                     date: this.date,
                     cost: this.cost
                 }
-            ).then(response => { console.log(response) })
+            ).then(response => {
+                 selfId = response.data.input_Id
+                // axios.get('https://localhost:7287/api/UserInputs',{
+                // response:
+                //     {
+                //         input_Id: this.input_Id
+                //     }
+                // }
+                // )
+            })
         }
     }
 };
