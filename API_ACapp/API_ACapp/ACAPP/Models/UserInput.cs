@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ACapp.Models;
 
 public partial class User_Input
 {
     [Key]
+  
     public int input_id { get; set; }
 
     public DateTime? date { get; set; }
