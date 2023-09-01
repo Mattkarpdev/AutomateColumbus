@@ -19,12 +19,13 @@ const message = ref('')
             <input type="number" placeholder="video doorbell" v-model="doorbells" />
         </div>
         <div>
-            <button @click=getUserInputById type="submit"> Calculate Cost</button>
+            <button @click="showQuote = true" type="submit"> Calculate Cost</button>
+         
         </div>
     </form>
 
-    <div>
-
+    <div v-if="showQuote">
+        <button @click=getUserInputById> show Quote</button>
         {{ quote.cost }}
 
         <form @submit.prevent="putUserInfo">
