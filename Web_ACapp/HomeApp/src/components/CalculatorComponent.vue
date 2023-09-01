@@ -5,7 +5,7 @@ const message = ref('')
 </script>
 
 <template>
-    <form @submit.prevent="postUserInput" v-if="showCalculator">
+    <form @submit.prevent="postUserInput"  v-if="showCalculator">
         <div>
             <label>Windows: </label>
             <input type="number" placeholder="number of windows" v-model="windows" />
@@ -23,8 +23,8 @@ const message = ref('')
         </div>
     </form>
 
-    <div > 
-        <selfId>hi</selfId>
+    <div @submit.prevent="getUserInputById"  >
+        {{ inputResponse}}
     </div>
 </template>
 
@@ -32,14 +32,14 @@ const message = ref('')
 
 const showCalculator = ref(true)
 const showQuote = ref(false)
-let selfId = this
+const quoteCost = ref(1)
 import axios from 'axios';
 export default {
     data() {
         return {
             userInput:
             {
-                input_Id: 0,
+                input_id: 1,
                 date: "2023-08-23T21:32:12.399Z",
                 email: "string",
                 phoneNumber: "string",
@@ -48,12 +48,14 @@ export default {
                 num_doors: 0,
                 video_doorbell: 0,
                 cost: 1
-            }
+            },
+            inputResponse: [],
+            quote: [],
         }
 
     },
     methods: {
-        postUserInput() {
+        async postUserInput() {
             axios.post('https://localhost:7287/api/UserInputs',
                 {
                     num_windows: this.windows,
@@ -62,17 +64,21 @@ export default {
                     date: this.date,
                     cost: this.cost
                 }
-            ).then(response => {
-                 selfId = response.data.input_Id
-                // axios.get('https://localhost:7287/api/UserInputs',{
-                // response:
-                //     {
-                //         input_Id: this.input_Id
-                //     }
-                // }
-                // )
-            })
+            ).then
+                (response => this.inputResponse = response.data
+                )
+
+        },
+         getUserInputById() {
+            axios.get('https://localhost:7287/api/UserInputs/1')
+                .then((response) =>{console.log(response.data)
+                     this.quote = response.data})
         }
+       
+    },
+    computed:{
+      
+
     }
 };
 </script>
