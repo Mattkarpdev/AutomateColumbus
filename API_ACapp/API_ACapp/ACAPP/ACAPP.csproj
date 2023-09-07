@@ -7,8 +7,10 @@
     <UserSecretsId>a0f513c6-cb7a-4f29-8267-3332b8e73245</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
@@ -17,6 +19,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Kerberos.NET" Version="4.6.29" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Azure.ResourceManager.Sql" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

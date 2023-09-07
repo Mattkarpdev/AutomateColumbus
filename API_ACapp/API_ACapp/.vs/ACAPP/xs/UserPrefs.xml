@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{19085691-1446-45A5-B3F9-65FBE64BD2BD}|https">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="ACAPP/appsettings.json" Line="12" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ACAPP">
+            <Node name="ACAPP">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
