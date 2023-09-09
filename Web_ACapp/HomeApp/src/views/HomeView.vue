@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+   <p> Welcome to Automate Columbus, a source of local home automation guidence and service.</p>
   </main>
 </template>
