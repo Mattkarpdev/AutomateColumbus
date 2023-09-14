@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       
       <h1 class="black">Automate Columbus</h1>
-
+    <div></div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/guides">Guides</RouterLink>
