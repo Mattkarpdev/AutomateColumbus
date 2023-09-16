@@ -4,11 +4,13 @@ import CalculatorComponent from '../components/CalculatorComponent.vue'
 
 </script>
 
+
 <template>
   <main>
     <p> Welcome to Automate Columbus, a source of local home automation guidence and service.</p>
+    
 
-<div class="container-fluid">
+<div class="d-flex">
     <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">

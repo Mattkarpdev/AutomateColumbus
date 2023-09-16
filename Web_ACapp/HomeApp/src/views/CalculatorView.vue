@@ -13,10 +13,3 @@ const message = ref('')
 </template>
 
 
-<style scoped>
-
-
-
-
-
-</style>
