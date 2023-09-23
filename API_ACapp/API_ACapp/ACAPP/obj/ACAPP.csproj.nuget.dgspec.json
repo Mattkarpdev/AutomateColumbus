@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj": {}
+    "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj": {}
   },
   "projects": {
-    "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj": {
+    "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj",
+        "projectUniqueName": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj",
         "projectName": "ACAPP",
-        "projectPath": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj",
+        "projectPath": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/ACAPP.csproj",
         "packagesPath": "/Users/wizardiesha/.nuget/packages/",
-        "outputPath": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAPP/obj/",
+        "outputPath": "/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wizardiesha/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,7 @@
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.308/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +53,11 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.CodeAnalysis.AnalyzerUtilities": {
+              "target": "Package",
+              "version": "[3.3.4, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -61,21 +65,21 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
         }
       }
     }
