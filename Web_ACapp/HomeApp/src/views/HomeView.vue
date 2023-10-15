@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import CalculatorComponent from '../components/CalculatorComponent.vue'
+import DoorbellGuide from '../router/index.js'
 import { RouterLink } from 'vue-router';
 
 </script>
@@ -41,7 +42,7 @@ import { RouterLink } from 'vue-router';
             <div class="card-body">
               <h5 class="card-title">Video Doorbell</h5>
               <p class="card-text">Video doorbells have bad picture, amazon needs to make them better.</p>
-              <RouterLink to="../src/components/guides/DoorbellGuide.vue" class="btn btn-primary">Go somewhere
+              <RouterLink to="/guides/doorbellguide" class="btn btn-primary">Go somewhere
               </RouterLink>
             </div>
           </div>

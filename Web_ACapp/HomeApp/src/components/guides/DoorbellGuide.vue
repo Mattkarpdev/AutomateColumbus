@@ -1,7 +1,8 @@
 <template>
-    <p class="bg-primary text-wrap">
-        # Ring Alarm System Installation Guide
-
+    <main>
+       
+        <p class="h2">Ring Alarm System Installation Guide</p>
+        <p class="bg-primary text-wrap">
         Congratulations on your purchase of the Ring Alarm System! This guide will walk you through the installation process
         to help you set up your home security system quickly and effectively. Please read through the instructions carefully
         before you begin.
@@ -97,13 +98,17 @@
         If you require further assistance or encounter technical difficulties during installation, refer to the Ring Alarm
         System user manual for detailed troubleshooting steps. You can also contact Ring's customer support for help.
 
-    Enjoy the peace of mind that comes with your Ring Alarm System. Your home is now equipped with a reliable security
-    solution that helps protect your loved ones and belongings.
+        Enjoy the peace of mind that comes with your Ring Alarm System. Your home is now equipped with a reliable security
+        solution that helps protect your loved ones and belongings.
 
-    [Ring Customer Support](https://support.ring.com/hc/en-us)
+        [Ring Customer Support](https://support.ring.com/hc/en-us)
 
-    This concludes the installation guide for your Ring Alarm System. Thank you for choosing Ring to safeguard your
-    home!
+        This concludes the installation guide for your Ring Alarm System. Thank you for choosing Ring to safeguard your
+        home!
 
-    -- chat.openai.com
-</p></template>
+        -- chat.openai.com
+        </p>
+    </main>
+</template>
+<script></script>
+<style></style>

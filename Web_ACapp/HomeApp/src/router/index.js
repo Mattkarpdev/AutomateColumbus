@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import CalculatorView from '../views/CalculatorView.vue'
 import GuidesView from '../views/GuidesView.vue'
 import RingAlarmGuide from '../components/guides/RingAlarmGuide.vue'
+import DoorbellGuide from '../components/guides/DoorbellGuide.vue'
 
 
 const router = createRouter({
@@ -27,7 +28,13 @@ const router = createRouter({
       path: '/guides/ringalarmguide',
       name: 'ringalarmguide',
       component: RingAlarmGuide
-    }
+    },
+    {
+      path: '/guides/doorbellguide',
+      name: 'doorbellguide',
+      component: DoorbellGuide
+    },
+
 
 
 

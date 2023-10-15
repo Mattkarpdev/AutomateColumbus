@@ -9,12 +9,12 @@ const message = ref('')
 <template>
     <div class="container">
         <h2>
-            <RouterLink to="/guides/ringalarmguide" class="link-opacity-25-hover"> Ring Alarm Guide
+            <RouterLink to="/guides/DoorbellGuide" class="link-opacity-25-hover"> Ring Alarm Guide
         </RouterLink>
         </h2>
-     
-    </div>
     
+    </div>
+
 </template>
 
 
