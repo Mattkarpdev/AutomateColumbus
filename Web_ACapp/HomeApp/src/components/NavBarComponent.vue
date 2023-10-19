@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <div class="bg-blue flex">
+      <div class="flex flex-row px-8 pt-4 text-3xl font-bold">
+        <div><img class="p-0" src="src/assets/Frame 4.png" alt="" /></div>
+        <span class="text-red p-2">Automate</span>
+        <span class="p-2 text-white">Columbus</span>
+      </div>
+      <nav class="flex">
+        <ul class="flex items-center">
+          <li><a class="nav-link scrollto p-2" href="#news">News</a></li>
+          <li><a class="nav-link scrollto p-2" href="#guide">Guides</a></li>
+
+          <li>
+            <a class="nav-link scrollto p-2" href="#installationCalculator"
+              >Installation Calculator</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</template>
+
+<style>
+nav {
+  position: absolute;
+  right: 30px;
+  align-self: center;
+}
+</style>
