@@ -15,131 +15,33 @@ import NavBarComponent from "../components/NavBarComponent.vue";
       <header>
         <NavBarComponent />
       </header>
-      <main class=" ">
-        <section class="d-flex justify-content-center p-4">
-          <div class="container" style="opacity: 0.9">
-            <h5 class="bg-dark p-5" style="color: rgb(236, 209, 241)">
-              Automate Columbus is a hub for home automation insite through
-              comprehensive installation guides and the latest news on smart
-              technology. We also offer community support as well as
-              installation services to the Columbus and Dayton Ohio areas.
-            </h5>
+      <main class="">
+        <section class="columns-2 p-4">
+          <div
+            class="inline-flex h-[528px] w-[1727px] flex-col items-center justify-end gap-2.5 px-[260px]"
+          >
+            <div
+              class="inline-flex h-[508px] w-[1207px] items-start justify-start gap-[45px]"
+            >
+              <img
+                class="w-[616px] self-stretch rounded-[25px]"
+                src="src/assets/DreamShaper_v7_Home_Automation_0.jpg"
+              />
+              <div class="container" style="opacity: 0.9">
+                <h5
+                  class="text-black font-['Hind Vadodara'] h-[508px] w-[546px] p-5 text-center text-4xl"
+                  style="color: rgb(7, 6, 7)"
+                >
+                  Automate Columbus is a hub for home automation insite through
+                  comprehensive installation guides and the latest news on smart
+                  technology. We also offer community support as well as
+                  installation services to the Columbus and Dayton Ohio areas.
+                </h5>
+              </div>
+            </div>
           </div>
         </section>
-        <div id="guide" class="d-flex justify-content-center p-5">
-          <h2 class="text-3xl font-bold underline">Guides</h2>
-          <div class="p-2">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/09/LG-RING-DOORBELL-COMP.jpg?w=1280&quality=44"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="text-3xl font-bold underline">Video Doorbell</h5>
-                <p class="card-text">
-                  Video doorbells have bad picture, amazon needs to make them
-                  better.
-                </p>
-                <RouterLink to="/guides/doorbellguide" class="btn btn-primary"
-                  >Go somewhere
-                </RouterLink>
-              </div>
-            </div>
-          </div>
-          <div class="p-2">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://cdn.idealo.com/folder/Product/201534/5/201534593/s3_produktbild_max/ring-alarm-kit-2nd-gen.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="p-2" id="guide">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://u-tec.com/cdn/shop/t/57/assets/sence-banner.png?v=175755877485102375081689760851"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="news" class="d-flex justify-content-center p-5">
-          <h2>News</h2>
-          <div class="p-2">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/09/LG-RING-DOORBELL-COMP.jpg?w=1280&quality=44"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Video Doorbell</h5>
-                <p class="card-text">
-                  Video doorbells have bad picture, amazon needs to make them
-                  better.
-                </p>
-                <RouterLink
-                  to="../src/components/guides/DoorbellGuide.vue"
-                  class="btn btn-primary"
-                  >Go somewhere
-                </RouterLink>
-              </div>
-            </div>
-          </div>
-          <div class="p-2">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://cdn.idealo.com/folder/Product/201534/5/201534593/s3_produktbild_max/ring-alarm-kit-2nd-gen.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="p-2" id="guide">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://u-tec.com/cdn/shop/t/57/assets/sence-banner.png?v=175755877485102375081689760851"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div
           id="installationCalculator"
           class="d-flex justify-content-center p-5"
