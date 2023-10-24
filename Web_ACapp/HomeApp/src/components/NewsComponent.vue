@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="news" class="d-flex justify-content-center p-5">
     <h2>News</h2>
     <div class="p-2">
@@ -56,4 +56,15 @@
       </div>
     </div>
   </div>
+</template> -->
+
+<template>
+  <a v-on:click="cnetRss(rss)">CNET</a>
 </template>
+<script>
+methods: {
+  cnetRss(rss);
+  {
+  }
+}
+</script>

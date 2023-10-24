@@ -7,6 +7,10 @@ module.exports = {
     "src/components/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      main: "league-spartan",
+      title: "neue-black",
+    },
     colors: {
       white: "#ffffff",
       blue: "#015B70",

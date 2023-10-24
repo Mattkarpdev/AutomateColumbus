@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import CalculatorComponent from "../components/CalculatorComponent.vue";
+import GuidesComponent from "../components/GuideComponent.vue";
+import NewsComponent from "../components/NewsComponent.vue";
 import DoorbellGuide from "../router/index.js";
 import { RouterLink } from "vue-router";
 import NavBarComponent from "../components/NavBarComponent.vue";
@@ -29,7 +31,7 @@ import NavBarComponent from "../components/NavBarComponent.vue";
               />
               <div class="container" style="opacity: 0.9">
                 <h5
-                  class="text-black font-['Hind Vadodara'] h-[508px] w-[546px] p-5 text-center text-4xl"
+                  class="text-black h-[508px] w-[546px] p-5 text-center font-main text-4xl"
                   style="color: rgb(7, 6, 7)"
                 >
                   Automate Columbus is a hub for home automation insite through
@@ -41,6 +43,14 @@ import NavBarComponent from "../components/NavBarComponent.vue";
             </div>
           </div>
         </section>
+        <div>
+          <h2>News</h2>
+          <NewsComponent />
+        </div>
+        <div>
+          <h2>Guides</h2>
+          <GuidesComponent />
+        </div>
 
         <div
           id="installationCalculator"

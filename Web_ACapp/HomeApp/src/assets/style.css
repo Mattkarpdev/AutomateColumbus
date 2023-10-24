@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+@font-face {
+  font-family: league-spartan;
+  src: url(../assets/LeagueSpartan-2.220/static/TTF/LeagueSpartan-Regular.ttf);
+}
+@font-face {
+  font-family: neue-black;
+  src: url(../assets/TheNeueBlack-1.007/static/TTF/TheNeue-Black.ttf);
+}
