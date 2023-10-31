@@ -67,8 +67,8 @@ methods: {
 </script> -->
 
 <!-- reference https://javascript.plainenglish.io/create-an-rss-reader-with-vue-js-and-javascript-2deb5785556a-->
-<template>
-  <!--<div style="color: #ccc; font-size: 10px; text-align: right; width: 230px">
+<!-- <template> -->
+<!--<div style="color: #ccc; font-size: 10px; text-align: right; width: 230px">
     powered by
     <a
       href="https://surfing-waves.com"
@@ -78,14 +78,11 @@ methods: {
       >Surfing Waves</a
     >
   </div> -->
-  <h2>My CD Collection:</h2>
 
-  <button type="button" v-on:click="loadXMLDoc()">Get my CD collection</button>
+<!-- <div id="news1" v-on="loadXMLDoc()"></div>
+</template> -->
 
-  <p id="news1"></p>
-</template>
-
-<script>
+<!-- <script>
 export default {
   methods: {
     loadXMLDoc() {
@@ -102,16 +99,16 @@ export default {
         var x, i, xmlDoc, txt;
         xmlDoc = xml.responseXML;
         txt = "";
-        x = xmlDoc.getElementsByTagName("link");
-        for (i = 0; i < x.length; i++) {
-          txt += x[i].childNodes[0].nodeValue + "<br>";
-        }
+        x = xmlDoc.getElementsByTagName("title");
+        i = 2;
+        txt = x[i].childNodes[0].nodeValue + "<br>";
+
         document.getElementById("news1").innerHTML = txt;
       }
     },
   },
 };
-</script>
+</script> -->
 <!-- <script>
 import { promises as fs } from "fs";
 import Parser from "rss-parser";
@@ -185,13 +182,20 @@ src = "//feed.surfing-waves.com/js/rss-feed.js";
 
 <!-- end sw-rss-feed code -->
 <!-- <script>
+import axios from "axios";
 const RSS_URL = `https://www.the-ambient.com/rss`;
+export default{
 
-fetch(RSS_URL)
+      computed:{get(RSS_URL)
   .then((response) => response.text())
   .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
   .then((data) => console.log(data));
+},
+  };
 </script> -->
+<!-- <template>
+
+</template> -->
 <!-- <template>
   <div id="app">
     <form @submit.prevent="getRss">
@@ -238,18 +242,28 @@ export default {
   },
 };
 </script> -->
-<!-- <script setup>
-import { ref } from "vue";
-import VueRssFeed from "/node_modules/vue-rss-feed/src/VueRssFeed.vue";
-</script>
 
 <template>
-  <VueRssFeed :feedUrl="feedUrl" :name="name" :limit="limit" />
-</template> -->
+  <div>
+    <VueRssFeed
+      :feedUrl="feedUrl"
+      :name="name"
+      :limit="limit"
+      :feedUrl2="feedUrl2"
+      :name2="name2"
+      :limit2="limit2"
+      :feedUrl3="feedUrl3"
+      :name3="name3"
+      :limit3="limit3"
+    />
+  </div>
+</template>
 
-<!-- <script>
+<script>
+import { ref } from "vue";
+import VueRssFeed from "/node_modules/vue-rss-feed/src/VueRssFeed.vue";
+
 export default {
-  name: "Demo",
   components: {
     VueRssFeed,
   },
@@ -258,7 +272,13 @@ export default {
       feedUrl: "https://www.the-ambient.com/rss",
       name: "",
       limit: 5,
+      feedUrl2: "https://www.gadgets360.com/rss/smart-home/feeds",
+      name2: "",
+      limit2: 5,
+      feedUrl3: "https://www.the-ambient.com/rss",
+      name3: "",
+      limit3: 5,
     };
   },
 };
-</script> -->
+</script>
