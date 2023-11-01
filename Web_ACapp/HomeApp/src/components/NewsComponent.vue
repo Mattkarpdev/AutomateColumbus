@@ -244,6 +244,9 @@ export default {
 </script> -->
 
 <template>
+  <div class="flex flex-row justify-center">
+    <h2 class="font-title text-3xl">News</h2>
+  </div>
   <div>
     <VueRssFeed
       :feedUrl="feedUrl"
@@ -271,13 +274,13 @@ export default {
     return {
       feedUrl: "https://www.the-ambient.com/rss",
       name: "",
-      limit: 5,
-      feedUrl2: "https://www.gadgets360.com/rss/smart-home/feeds",
+      limit: 1,
+      feedUrl2: "https://www.cnet.com/rss/smart-home/",
       name2: "",
-      limit2: 5,
-      feedUrl3: "https://www.the-ambient.com/rss",
+      limit2: 1,
+      feedUrl3: "https://www.gadgets360.com/rss/smart-home/feeds",
       name3: "",
-      limit3: 5,
+      limit3: 1,
     };
   },
 };
