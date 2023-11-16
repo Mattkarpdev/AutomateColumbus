@@ -244,8 +244,8 @@ export default {
 </script> -->
 
 <template>
-  <div class="flex flex-row justify-center">
-    <h2 class="font-title text-3xl">News</h2>
+  <div class="flex flex-row justify-center p-5">
+    <h2 class="p-3 font-title text-3xl">News</h2>
   </div>
   <div>
     <VueRssFeed

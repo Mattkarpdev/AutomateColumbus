@@ -14,10 +14,15 @@ module.exports = {
       title: "neue-black",
     },
     colors: {
-      white: "#ffffff",
-      blue: "#015B70",
-      red: "#701A07",
-      yellow: "#FBD270",
+      black: "#121212",
+      white: "#FFFDFD",
+
+      blue: {
+        l: "#B0D0EB",
+        n: "#015B70",
+      },
+      red: { n: "#701A07" },
+      yellow: { n: "#FBD270", l: "", d: "" },
     },
     extend: {},
   },

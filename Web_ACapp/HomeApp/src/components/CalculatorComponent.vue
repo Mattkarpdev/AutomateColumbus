@@ -5,45 +5,51 @@ const message = ref("");
 </script>
 
 <template>
-  <form @submit.prevent="postUserInput" v-if="showCalculator">
-    <div>
-      <label>Windows: </label>
-      <input type="number" placeholder="number of windows" v-model="windows" />
-    </div>
-    <div>
-      <label>Doors: </label>
-      <input type="number" placeholder="number of doors" v-model="doors" />
-    </div>
-    <div>
-      <label>Video Doorbell: </label>
-      <input type="number" placeholder="video doorbell" v-model="doorbells" />
-    </div>
-    <div>
-      <button @click="showQuote = true" type="submit">Calculate Cost</button>
-    </div>
-  </form>
-
-  <div v-if="showQuote">
-    <button @click="getUserInputById">show Quote</button>
-    {{ quote.cost }}
-
-    <form @submit.prevent="putUserInfo">
+  <div class="container mx-auto px-44">
+    <form @submit.prevent="postUserInput" v-if="showCalculator">
       <div>
-        <label>Name: </label>
-        <input type="text" placeholder="Name" v-model="name" />
+        <label>Windows: </label>
+        <input
+          type="number"
+          placeholder="number of windows"
+          v-model="windows"
+        />
       </div>
       <div>
-        <label>Email: </label>
-        <input type="text" placeholder="Email" v-model="email" />
+        <label>Doors: </label>
+        <input type="number" placeholder="number of doors" v-model="doors" />
       </div>
       <div>
-        <label>Phone Number: </label>
-        <input type="text" placeholder="Phone Number" v-model="phoneNumber" />
+        <label>Video Doorbell: </label>
+        <input type="number" placeholder="video doorbell" v-model="doorbells" />
       </div>
       <div>
-        <button type="submit">submit contact info</button>
+        <button @click="showQuote = true" type="submit">Calculate Cost</button>
       </div>
     </form>
+
+    <div v-if="showQuote">
+      <button @click="getUserInputById">show Quote</button>
+      {{ quote.cost }}
+
+      <form @submit.prevent="putUserInfo">
+        <div>
+          <label>Name: </label>
+          <input type="text" placeholder="Name" v-model="name" />
+        </div>
+        <div>
+          <label>Email: </label>
+          <input type="text" placeholder="Email" v-model="email" />
+        </div>
+        <div>
+          <label>Phone Number: </label>
+          <input type="text" placeholder="Phone Number" v-model="phoneNumber" />
+        </div>
+        <div>
+          <button type="submit">submit contact info</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 

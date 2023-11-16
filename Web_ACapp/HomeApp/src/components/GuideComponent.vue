@@ -1,17 +1,126 @@
 <template>
-  <div id="guide" class="flex flex-col p-3">
-    <div class="flex justify-center">
+  <div
+    id="guide"
+    class="flex flex-col flex-nowrap p-10 xl:container xl:mx-auto xl:px-44"
+  >
+    <div class="flex justify-center p-4">
       <h2 class="font-title text-3xl">Guides</h2>
     </div>
-    <div class="grid grid-flow-col grid-cols-4 grid-rows-4 p-5">
-      <div class="p-2">Video Doorbell</div>
-      <div class="p-2">Alarm System</div>
-      <div class="p-2">Door Lock</div>
-      <div class="p-2">Smart Protocol</div>
-      <div class="p-2">Smart Ecosystems</div>
+
+    <div class="inline-flex items-center justify-center gap-[35px] p-3">
+      <div class="text-center font-main text-4xl font-bold">tags:</div>
+
+      <button
+        class="rounded-[23px] border p-2 transition ease-in-out hover:scale-110"
+        v-show="
+          showGeneral == false ||
+          showCameras == false ||
+          showLights == false ||
+          showSecurity == false
+        "
+        v-on:click="
+          (showGeneral = true),
+            (showCameras = true),
+            (showSecurity = true),
+            (showLights = true)
+        "
+      >
+        <div class="text-center font-main text-4xl font-semibold text-black">
+          All Guides
+        </div>
+      </button>
+
+      <button
+        class="rounded-[23px] border p-2 hover:scale-110"
+        v-on:click="showSecurity = !showSecurity"
+        v-bind:style="{
+          backgroundColor: showSecurity ? '' : '#945C50',
+        }"
+      >
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{ color: showSecurity ? '' : 'lightgray' }"
+        >
+          Security
+        </div>
+      </button>
+
+      <button
+        class="rounded-[23px] border p-2 hover:scale-110"
+        v-on:click="showLights = !showLights"
+        v-bind:style="{
+          backgroundColor: showLights ? '' : '#945C50',
+        }"
+      >
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{ color: showLights ? '' : 'lightgray' }"
+        >
+          Lights
+        </div>
+      </button>
+
+      <button
+        class="rounded-[23px] border p-2 hover:scale-110"
+        v-on:click="showGeneral = !showGeneral"
+        v-bind:style="{
+          backgroundColor: showGeneral ? '' : '#945C50',
+        }"
+      >
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{ color: showGeneral ? '' : 'lightgray' }"
+        >
+          General Info
+        </div>
+      </button>
+
+      <button
+        class="rounded-[23px] border p-2 hover:scale-110"
+        v-on:click="showCameras = !showCameras"
+        v-bind:style="{
+          backgroundColor: showCameras ? '' : '#945C50',
+        }"
+      >
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{ color: showCameras ? '' : 'lightgray' }"
+        >
+          Cameras
+        </div>
+      </button>
+    </div>
+    <div
+      class="grid grid-flow-col grid-cols-4 grid-rows-4 p-9 font-main text-2xl"
+    >
+      <div v-show="showGeneral & showLights" class="p-2">Video Doorbell</div>
+      <div v-show="showCameras & showGeneral & showLights" class="p-2">
+        Alarm System
+      </div>
+      <div v-show="showCameras & showGeneral & showLights" class="p-2">
+        Door Lock
+      </div>
+      <div v-show="showCameras & showSecurity & showLights" class="p-2">
+        Smart Protocol
+      </div>
+      <div v-show="showCameras & showSecurity & showLights" class="p-2">
+        Smart Ecosystems
+      </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      showCameras: true,
+      showGeneral: true,
+      showLights: true,
+      showSecurity: true,
+    };
+  },
+};
+</script>
 
 <!-- <div>
         <div class="p-2">

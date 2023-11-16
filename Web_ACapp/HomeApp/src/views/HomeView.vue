@@ -18,20 +18,16 @@ import NavBarComponent from "../components/NavBarComponent.vue";
         <NavBarComponent />
       </header>
       <main class="">
-        <section class="columns-2 p-4">
-          <div
-            class="inline-flex h-[528px] w-[1727px] flex-col items-center justify-end gap-2.5 px-[260px]"
-          >
-            <div
-              class="inline-flex h-[508px] w-[1207px] items-start justify-start gap-[45px]"
-            >
+        <section class="p-10">
+          <div class="flex justify-center self-center">
+            <div class="flex h-[508px] w-[1207px] gap-[45px]">
               <img
-                class="w-[616px] self-stretch rounded-[25px]"
+                class="w-[616px] rounded-[25px]"
                 src="src/assets/DreamShaper_v7_Home_Automation_0.jpg"
               />
-              <div class="container" style="opacity: 0.9">
+              <div class="flex self-center" style="opacity: 0.9">
                 <h5
-                  class="text-black h-[508px] w-[546px] p-5 text-center font-main text-4xl"
+                  class="p-4 text-center font-main text-4xl text-black"
                   style="color: rgb(7, 6, 7)"
                 >
                   Automate Columbus is a hub for home automation insite through
@@ -44,11 +40,11 @@ import NavBarComponent from "../components/NavBarComponent.vue";
           </div>
         </section>
         <div>
-          <h2>News</h2>
+          <h2></h2>
           <NewsComponent />
         </div>
         <div>
-          <h2>Guides</h2>
+          <h2></h2>
           <GuidesComponent />
         </div>
 

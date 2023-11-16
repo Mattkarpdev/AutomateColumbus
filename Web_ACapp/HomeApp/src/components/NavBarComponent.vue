@@ -1,18 +1,29 @@
 <template>
   <div>
-    <div class="flex bg-blue">
-      <div class="flex flex-row px-8 pt-4 text-3xl font-bold">
-        <div><img class="p-0" src="src/assets/Frame 4.png" alt="" /></div>
-        <span class="p-2 text-red">Automate</span>
-        <span class="p-2 text-white">Columbus</span>
+    <div class="flex bg-blue-n">
+      <div class="flex flex-row px-8 pt-4 font-bold">
+        <div>
+          <img
+            class="h-20 object-contain p-0"
+            src="src/assets/LogoAC.png"
+            alt=""
+          />
+        </div>
+        <!-- <div class="p-2 text-4xl text-white">
+          Automate
+          <div class="text-black p-2 text-3xl">Automate</div>
+        </div>
+        <div class="p-2 text-3xl text-white">Columbus</div> -->
       </div>
       <nav class="flex">
-        <ul class="flex items-center font-title text-xl text-yellow">
-          <li><a class="nav-link scrollto p-2" href="#news">News</a></li>
-          <li><a class="nav-link scrollto p-2" href="#guide">Guides</a></li>
+        <ul
+          class="text-yellow flex items-center font-title text-2xl text-white/90"
+        >
+          <li><a class="nav-link scrollto p-3" href="#news">News</a></li>
+          <li><a class="nav-link scrollto p-3" href="#guide">Guides</a></li>
 
           <li>
-            <a class="nav-link scrollto p-2" href="#installationCalculator"
+            <a class="nav-link scrollto p-3" href="#installationCalculator"
               >Cost Estimator</a
             >
           </li>
