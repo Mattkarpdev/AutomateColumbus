@@ -1,5 +1,6 @@
-USE [homeautomate]
-GO
+
+DROP TRIGGER calculate_install
+DROP TRIGGER calculate_equipment
 
 DROP TABLE dbo.device
 DROP TABLE dbo.quote_input
@@ -20,6 +21,8 @@ CREATE TABLE [dbo].[device](
 	[installation_cost] [money] NOT NULL
 	CONSTRAINT PK_device_id PRIMARY KEY (device_id)
 ) ON [PRIMARY]
+
+
 GO
 CREATE TABLE [dbo].[user_input](
 	[input_id] [int] IDENTITY (1,1) NOT NULL,
@@ -27,7 +30,8 @@ CREATE TABLE [dbo].[user_input](
 	[num_windows] [int] NULL,
 	[num_doors] [int] NULL,
 	[video_doorbell] [int] NULL,
-	[cost] [int] NULL,
+	[cost_install] [int] NULL,
+    [cost_equipment] [int] NULL,
 	CONSTRAINT PK_input_id PRIMARY KEY (input_id)
 ) ON [PRIMARY] 
 GO
