@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const message = ref("");
 </script>
@@ -29,9 +29,8 @@ const message = ref("");
     </form>
 
     <div v-if="showQuote">
-      <button @click="getUserInputById">show Quote</button>
-      {{ quote.cost }}
-
+      <p>{{ quote.cost_install }}</p>
+      <p>{{ quote.cost_equipment }}</p>
       <form @submit.prevent="putUserInfo">
         <div>
           <label>Name: </label>
@@ -70,12 +69,14 @@ export default {
         num_windows: 0,
         num_doors: 0,
         video_doorbell: 0,
-        cost: 1,
+        cost_install: 1,
+        cost_equipment: 1,
       },
       inputResponse: [],
       quote: [],
     };
   },
+
   methods: {
     async postUserInput() {
       await axios
@@ -84,9 +85,16 @@ export default {
           num_doors: this.doors,
           video_doorbell: this.doorbells,
           date: this.date,
-          cost: this.cost,
+          cost_install: this.cost_install,
+          cost_equipment: this.cost_equipment,
         })
         .then((response) => (this.inputResponse = response.data));
+      await axios
+        .get(
+          "https://localhost:7287/api/UserInputs/" +
+            this.inputResponse.input_id,
+        )
+        .then((response) => (this.quote = response.data));
     },
     async getUserInputById() {
       await axios
