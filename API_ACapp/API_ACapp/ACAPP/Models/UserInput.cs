@@ -19,5 +19,7 @@ public partial class User_Input
 
     public int? video_doorbell { get; set; }
 
-    public int? cost { get; set; }
+    public int? cost_install { get; set; }
+
+    public int? cost_equipment { get; set; }
 }
