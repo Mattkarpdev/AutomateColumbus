@@ -6,6 +6,7 @@ import NewsComponent from "../components/NewsComponent.vue";
 import DoorbellGuide from "../router/index.js";
 import { RouterLink } from "vue-router";
 import NavBarComponent from "../components/NavBarComponent.vue";
+import ContactComponent from "../components/ContactComponent.vue";
 </script>
 
 <template>
@@ -52,8 +53,16 @@ import NavBarComponent from "../components/NavBarComponent.vue";
           id="installationCalculator"
           class="d-flex justify-content-center p-5"
         >
-          <h2>Installation Calculator</h2>
+          <h2></h2>
           <CalculatorComponent />
+        </div>
+
+        <div
+          id="installationCalculator"
+          class="d-flex justify-content-center pt-5"
+        >
+          <h2></h2>
+          <ContactComponent />
         </div>
       </main>
     </div>

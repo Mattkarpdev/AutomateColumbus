@@ -5,9 +5,16 @@ const message = ref("");
 </script>
 
 <template>
+  <div class="flex justify-center p-4">
+    <h2 class="font-title text-3xl">Cost Estimator</h2>
+  </div>
   <div class="container mx-auto px-44">
-    <form @submit.prevent="postUserInput" v-if="showCalculator">
-      <div>
+    <form
+      class="grid grid-cols-3"
+      @submit.prevent="postUserInput"
+      v-if="showCalculator"
+    >
+      <div class="p-5">
         <label>Windows: </label>
         <input
           type="number"
@@ -15,37 +22,49 @@ const message = ref("");
           v-model="windows"
         />
       </div>
-      <div>
+      <div class="p-5">
         <label>Doors: </label>
         <input type="number" placeholder="number of doors" v-model="doors" />
       </div>
-      <div>
+      <div class="p-5">
         <label>Video Doorbell: </label>
         <input type="number" placeholder="video doorbell" v-model="doorbells" />
       </div>
       <div>
-        <button @click="showQuote = true" type="submit">Calculate Cost</button>
+        <button
+          class="rounded-md border-2"
+          @click="showQuote = true"
+          type="submit"
+        >
+          Calculate Cost
+        </button>
       </div>
     </form>
 
     <div v-if="showQuote">
-      <p>{{ quote.cost_install }}</p>
-      <p>{{ quote.cost_equipment }}</p>
-      <form @submit.prevent="putUserInfo">
-        <div>
+      <div>
+        You are looking for Security system that will contain a hub, key pad, 2
+        motion sensors and {{ this.windows + this.doors }} contact sensors.
+      </div>
+      <p>cost of equipment: {{ quote.cost_equipment }}</p>
+      <p>cost of install: {{ quote.cost_install }}</p>
+      <form class="grid grid-cols-3" @submit.prevent="putUserInfo">
+        <div class="p-5">
           <label>Name: </label>
           <input type="text" placeholder="Name" v-model="name" />
         </div>
-        <div>
+        <div class="p-5">
           <label>Email: </label>
           <input type="text" placeholder="Email" v-model="email" />
         </div>
-        <div>
+        <div class="p-5">
           <label>Phone Number: </label>
           <input type="text" placeholder="Phone Number" v-model="phoneNumber" />
         </div>
         <div>
-          <button type="submit">submit contact info</button>
+          <button class="rounded-md border-2" type="submit">
+            submit contact info
+          </button>
         </div>
       </form>
     </div>
@@ -84,7 +103,7 @@ export default {
           num_windows: this.windows,
           num_doors: this.doors,
           video_doorbell: this.doorbells,
-          date: this.date,
+          date: new Date(),
           cost_install: this.cost_install,
           cost_equipment: this.cost_equipment,
         })

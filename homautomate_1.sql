@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[device](
 GO
 CREATE TABLE [dbo].[user_input](
 	[input_id] [int] IDENTITY (1,1) NOT NULL,
-	[date] [date] NULL,
+	[date] [date] DEFAULT GETDATE(),
 	[num_windows] [int] NULL,
 	[num_doors] [int] NULL,
 	[video_doorbell] [int] NULL,
