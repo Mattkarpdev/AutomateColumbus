@@ -1528,3 +1528,4 @@ C:/Users/Wizar/source/repos/InstallationQuoteCalculator/API_ACapp/API_ACapp/ACAP
 /Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/obj/Debug/net7.0/ACAPP.csproj.CopyComplete
 /Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/obj/Debug/net7.0/ACAPP.genruntimeconfig.cache
 /Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/obj/Debug/net7.0/ref/ACAPP.dll
+/Users/wizardiesha/HomeAutomate/InstallationQuoteCalculator0.1/API_ACapp/API_ACapp/ACAPP/bin/Debug/net7.0/AspNetCoreRateLimit.dll

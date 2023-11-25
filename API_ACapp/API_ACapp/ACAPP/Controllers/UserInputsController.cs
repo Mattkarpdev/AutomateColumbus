@@ -8,12 +8,15 @@ using Microsoft.EntityFrameworkCore;
 using ACapp.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace ACAPP.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [AllowAnonymous]
+    [EnableRateLimiting("token")]
+
     public class UserInputsController : ControllerBase
     {
         private readonly ACAPPContext _context;

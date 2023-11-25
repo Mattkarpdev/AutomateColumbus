@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ACapp.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace ACAPP.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [AllowAnonymous]
+    [EnableRateLimiting("token")]
+  
 
     public class DevicesController : ControllerBase
     {
@@ -25,6 +28,7 @@ namespace ACAPP.Controllers
 
         // GET: api/Devices
         [HttpGet]
+        
         public async Task<ActionResult<IEnumerable<Device>>> GetDevice()
         {
           if (_context.Device == null)
