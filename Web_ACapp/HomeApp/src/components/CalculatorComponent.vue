@@ -41,7 +41,8 @@ const message = ref("");
       </div>
     </form>
 
-    <div v-if="showQuote">
+    <div v-show="showQuote">
+      <div v-show="apiLimit">{{ apiLimit }}</div>
       <div>
         You are looking for Security system that will contain a hub, key pad, 2
         motion sensors and {{ this.windows + this.doors }} contact sensors.
@@ -72,6 +73,7 @@ const message = ref("");
 </template>
 
 <script>
+const apiLimit = ref(false);
 const showCalculator = ref(true);
 const showQuote = ref(false);
 const quoteCost = ref(1);
@@ -107,13 +109,32 @@ export default {
           cost_install: this.cost_install,
           cost_equipment: this.cost_equipment,
         })
+
         .then((response) => (this.inputResponse = response.data));
       await axios
         .get(
           "https://localhost:7287/api/UserInputs/" +
             this.inputResponse.input_id,
         )
-        .then((response) => (this.quote = response.data));
+        .then((response) => (this.quote = response.data))
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
     },
     async getUserInputById() {
       await axios

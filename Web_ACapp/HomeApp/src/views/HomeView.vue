@@ -57,10 +57,7 @@ import ContactComponent from "../components/ContactComponent.vue";
           <CalculatorComponent />
         </div>
 
-        <div
-          id="installationCalculator"
-          class="d-flex justify-content-center pt-5"
-        >
+        <div id="contactComponent" class="d-flex justify-content-center pt-5">
           <h2></h2>
           <ContactComponent />
         </div>

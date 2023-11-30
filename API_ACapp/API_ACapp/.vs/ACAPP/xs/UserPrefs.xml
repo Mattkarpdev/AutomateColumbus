@@ -1,27 +1,41 @@
 ﻿<Properties StartupConfiguration="{19085691-1446-45A5-B3F9-65FBE64BD2BD}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ACAPP/Models/UserInput.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ACAPP/Controllers/UserInputsController.cs">
     <Files>
-      <File FileName="ACAPP/Models/UserInput.cs" Line="1" Column="1" />
+      <File FileName="ACAPP/Models/UserInput.cs" />
+      <File FileName="ACAPP/appsettings.Development.json" />
+      <File FileName="ACAPP/Program.cs" />
+      <File FileName="ACAPP/Properties/launchSettings.json" />
+      <File FileName="ACAPP/Properties/serviceDependencies.json" />
+      <File FileName="ACAPP/Properties/serviceDependencies.local.json" />
+      <File FileName="ACAPP/Data/ACAPPContext.cs" />
+      <File FileName="ACAPP/Controllers/UserInputsController.cs" Line="19" Column="1" />
+      <File FileName="ACAPP/appsettings.json" />
+      <File FileName="ACAPP/Controllers/DevicesController.cs" />
+      <File FileName="ACAPP/Controllers/QuoteInputController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ACAPP">
             <Node name="ACAPP" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="UserInput.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="UserInputsController.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

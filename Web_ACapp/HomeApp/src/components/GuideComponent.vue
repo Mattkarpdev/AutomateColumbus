@@ -12,12 +12,12 @@
 
       <button
         class="rounded-[23px] border p-2 transition ease-in-out hover:scale-110"
-        v-show="
-          showGeneral == false ||
-          showCameras == false ||
-          showLights == false ||
-          showSecurity == false
-        "
+        v-bind:style="{
+          backgroundColor:
+            showSecurity & showGeneral & showCameras & showLights
+              ? '#945C50'
+              : '',
+        }"
         v-on:click="
           (showGeneral = true),
             (showCameras = true),
@@ -25,7 +25,15 @@
             (showLights = true)
         "
       >
-        <div class="text-center font-main text-4xl font-semibold text-black">
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{
+            color:
+              showSecurity & showGeneral & showCameras & showLights
+                ? 'lightgray'
+                : '',
+          }"
+        >
           All Guides
         </div>
       </button>

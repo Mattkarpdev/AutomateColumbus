@@ -21,7 +21,7 @@ module.exports = {
         l: "#B0D0EB",
         n: "#015B70",
       },
-      red: { n: "#701A07" },
+      red: { l: "#945C50", n: "#701A07" },
       yellow: { n: "#FBD270", l: "", d: "" },
     },
     extend: {},
