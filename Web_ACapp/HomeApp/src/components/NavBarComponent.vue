@@ -17,15 +17,13 @@
       </div>
       <nav class="flex">
         <ul
-          class="text-yellow flex items-center font-title text-2xl text-white/90"
+          class="text-yellow flex snap-y items-center font-title text-2xl text-white/90"
         >
-          <li><a class="nav-link scrollto p-3" href="#news">News</a></li>
-          <li><a class="nav-link scrollto p-3" href="#guide">Guides</a></li>
+          <li><a class="p-3" href="#news">News</a></li>
+          <li><a class="p-3" href="#guide">Guides</a></li>
 
           <li>
-            <a class="nav-link scrollto p-3" href="#installationCalculator"
-              >Cost Estimator</a
-            >
+            <a class="p-3" href="#installationCalculator">Cost Estimator</a>
           </li>
         </ul>
       </nav>

@@ -49,10 +49,7 @@ import ContactComponent from "../components/ContactComponent.vue";
           <GuidesComponent />
         </div>
 
-        <div
-          id="installationCalculator"
-          class="d-flex justify-content-center p-5"
-        >
+        <div class="d-flex justify-content-center p-5">
           <h2></h2>
           <CalculatorComponent />
         </div>

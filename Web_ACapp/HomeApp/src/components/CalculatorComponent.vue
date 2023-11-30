@@ -5,7 +5,7 @@ const message = ref("");
 </script>
 
 <template>
-  <div class="flex justify-center p-4">
+  <div class="flex justify-center p-4" id="installationCalculator">
     <h2 class="font-title text-3xl">Cost Estimator</h2>
   </div>
   <div class="container mx-auto px-44">
