@@ -40,31 +40,16 @@
 
       <button
         class="rounded-[23px] border p-2 hover:scale-110"
-        v-on:click="showSecurity = !showSecurity"
+        v-on:click="showCameras = !showCameras"
         v-bind:style="{
-          backgroundColor: showSecurity ? '' : '#945C50',
+          backgroundColor: showCameras ? '' : '#945C50',
         }"
       >
         <div
           class="text-center font-main text-4xl font-semibold text-black"
-          v-bind:style="{ color: showSecurity ? '' : 'lightgray' }"
+          v-bind:style="{ color: showCameras ? '' : 'lightgray' }"
         >
-          Security
-        </div>
-      </button>
-
-      <button
-        class="rounded-[23px] border p-2 hover:scale-110"
-        v-on:click="showLights = !showLights"
-        v-bind:style="{
-          backgroundColor: showLights ? '' : '#945C50',
-        }"
-      >
-        <div
-          class="text-center font-main text-4xl font-semibold text-black"
-          v-bind:style="{ color: showLights ? '' : 'lightgray' }"
-        >
-          Lights
+          Cameras
         </div>
       </button>
 
@@ -85,16 +70,31 @@
 
       <button
         class="rounded-[23px] border p-2 hover:scale-110"
-        v-on:click="showCameras = !showCameras"
+        v-on:click="showLights = !showLights"
         v-bind:style="{
-          backgroundColor: showCameras ? '' : '#945C50',
+          backgroundColor: showLights ? '' : '#945C50',
         }"
       >
         <div
           class="text-center font-main text-4xl font-semibold text-black"
-          v-bind:style="{ color: showCameras ? '' : 'lightgray' }"
+          v-bind:style="{ color: showLights ? '' : 'lightgray' }"
         >
-          Cameras
+          Lights
+        </div>
+      </button>
+
+      <button
+        class="rounded-[23px] border p-2 hover:scale-110"
+        v-on:click="showSecurity = !showSecurity"
+        v-bind:style="{
+          backgroundColor: showSecurity ? '' : '#945C50',
+        }"
+      >
+        <div
+          class="text-center font-main text-4xl font-semibold text-black"
+          v-bind:style="{ color: showSecurity ? '' : 'lightgray' }"
+        >
+          Security
         </div>
       </button>
     </div>
