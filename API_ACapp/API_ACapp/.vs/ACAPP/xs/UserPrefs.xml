@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{19085691-1446-45A5-B3F9-65FBE64BD2BD}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ACAPP/Controllers/UserInputsController.cs">
     <Files>
@@ -23,7 +22,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ACAPP">
+          <Node name="ACAPP" expanded="True">
             <Node name="ACAPP" expanded="True">
               <Node name="Controllers" expanded="True">
                 <Node name="UserInputsController.cs" selected="True" />
@@ -38,4 +37,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
