@@ -39,7 +39,7 @@ CREATE TABLE [dbo].[quote_input](
 	[quote_input_id] [int] IDENTITY (1,1) NOT NULL,
 	[input_id] [int],
 	[email] [varchar](max) NULL,
-	[phone_number] [varchar](max) NULL,
+	[phone_number] [nvarchar](max) NULL,
 	[name] [varchar](50) NULL,
 	CONSTRAINT PK_quote_input_id PRIMARY KEY (quote_input_id),
 	CONSTRAINT FK_input_id FOREIGN KEY (input_id)

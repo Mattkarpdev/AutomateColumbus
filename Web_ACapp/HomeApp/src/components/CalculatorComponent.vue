@@ -93,8 +93,9 @@ const message = ref("");
           <div class="p-5 pt-3">
             <label>Phone Number: </label>
             <input
-              type="number"
+              type="tel"
               placeholder="Phone Number"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               v-model="phoneNumber"
             />
           </div>
@@ -195,7 +196,7 @@ export default {
           input_id: this.quote.input_id,
           name: this.name,
           email: this.email,
-          phoneNumber: this.phoneNumber,
+          phone_Number: this.phoneNumber,
         })
         .then((response) => (this.quote = response.data));
     },

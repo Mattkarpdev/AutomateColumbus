@@ -109,7 +109,7 @@
         Door Lock
       </div>
       <div v-show="showCameras & showSecurity & showLights" class="p-2">
-        Smart Protocols
+        Smart Protocol
       </div>
       <div v-show="showCameras & showSecurity & showLights" class="p-2">
         Smart Ecosystems
