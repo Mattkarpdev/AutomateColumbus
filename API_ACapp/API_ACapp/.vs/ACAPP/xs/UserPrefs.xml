@@ -8,7 +8,7 @@
       <File FileName="ACAPP/Properties/serviceDependencies.json" />
       <File FileName="ACAPP/Properties/serviceDependencies.local.json" />
       <File FileName="ACAPP/Data/ACAPPContext.cs" />
-      <File FileName="ACAPP/Controllers/UserInputsController.cs" Line="13" Column="28" />
+      <File FileName="ACAPP/Controllers/UserInputsController.cs" />
       <File FileName="ACAPP/appsettings.json" />
       <File FileName="ACAPP/Controllers/DevicesController.cs" />
       <File FileName="ACAPP/Controllers/QuoteInputController.cs" />
@@ -32,11 +32,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

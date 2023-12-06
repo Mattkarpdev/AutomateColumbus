@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
-
+import MazPhoneNumberInput from "maz-ui/components/MazPhoneNumberInput";
 const message = ref("");
 </script>
 
@@ -92,13 +92,12 @@ const message = ref("");
           </div>
           <div class="p-5 pt-3">
             <label>Phone Number: </label>
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            <MazPhoneNumberInput
               v-model="phoneNumber"
+              @update="resultsTel = $event.formatNational"
             />
           </div>
+          <div>{{ resultsTel }}</div>
           <div class="p-5">
             <button
               class="rounded-md border-2 p-1 hover:scale-110"
@@ -118,8 +117,10 @@ const apiLimit = ref(false);
 const showCalculator = ref(true);
 const showQuote = ref(false);
 const quoteCost = ref(1);
+const phoneNumber = ref();
 
 import axios from "axios";
+
 export default {
   data() {
     return {
@@ -127,7 +128,7 @@ export default {
         input_id: 1,
         date: "2023-08-23T21:32:12.399Z",
         email: "string",
-        phoneNumber: "string",
+        phone_number: "string",
         name: "string",
         num_windows: 0,
         num_doors: 0,
@@ -191,12 +192,13 @@ export default {
         .then((response) => (this.quote = response.data));
     },
     async putUserInfo() {
+      const resultsTel = ref();
       await axios
         .post("https://localhost:7287/api/QuoteInput/", {
           input_id: this.quote.input_id,
           name: this.name,
           email: this.email,
-          phone_Number: this.phoneNumber,
+          phone_number: this.resultsTel,
         })
         .then((response) => (this.quote = response.data));
     },
