@@ -6,18 +6,30 @@
         Connect with us
       </div>
 
-      <div class="flex gap-2 object-center p-4">
+      <a href="sms:614-819-3796" class="flex gap-2 object-center p-3">
         <img class="h-10 w-10" src="src/assets/🦆 icon _comment_.png" />
         <div class="p-2 font-main text-3xl font-normal text-white">
           614-819-3796
         </div>
-      </div>
-      <div class="flex gap-2 object-center p-4">
+      </a>
+      <a
+        href="mailto:MattKarp@automatecolumbus.onmicrosoft.com"
+        class="flex gap-2 object-center p-3"
+      >
+        <img class="h-10 w-10" src="src/assets/🦆 icon _envelope_.png" />
+        <div class="p-2 font-main text-3xl font-normal text-white">
+          MattKarp@automatecolumbus.onmicrosoft.com
+        </div>
+      </a>
+      <a
+        href="https://discord.com/channels/1182394659717267597/1182394660606464041"
+        class="flex gap-2 object-center p-3"
+      >
         <img class="h-10 w-10" src="src/assets/🦆 icon _discord_.png" />
         <div class="p-2 font-main text-3xl font-normal text-white">
-          automatecolumbus
+          automatecolumbus1207
         </div>
-      </div>
+      </a>
       <div class="p-4 font-main text-3xl font-normal text-white">
         © 2023 Automate Columbus LLC
       </div>
