@@ -1,6 +1,8 @@
 ﻿<Properties StartupConfiguration="{19085691-1446-45A5-B3F9-65FBE64BD2BD}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ACAPP/Models/QuoteInput.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ACAPP/Controllers/QuoteInputController.cs">
     <Files>
       <File FileName="ACAPP/Models/UserInput.cs" />
       <File FileName="ACAPP/appsettings.Development.json" />
@@ -12,19 +14,20 @@
       <File FileName="ACAPP/Controllers/UserInputsController.cs" />
       <File FileName="ACAPP/appsettings.json" />
       <File FileName="ACAPP/Controllers/DevicesController.cs" />
-      <File FileName="ACAPP/Controllers/QuoteInputController.cs" />
-      <File FileName="ACAPP/Models/QuoteInput.cs" Line="1" Column="1" />
+      <File FileName="ACAPP/Controllers/QuoteInputController.cs" Line="1" Column="1" />
+      <File FileName="ACAPP/Models/QuoteInput.cs" />
+      <File FileName="ACAPP/Models/Device.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ACAPP">
             <Node name="ACAPP" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="QuoteInput.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="QuoteInputController.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -33,10 +36,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ACAPP PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
