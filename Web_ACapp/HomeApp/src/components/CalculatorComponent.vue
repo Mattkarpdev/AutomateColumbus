@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import MazPhoneNumberInput from "maz-ui/components/MazPhoneNumberInput";
+import MazInput from "maz-ui/components/MazInput";
 const message = ref("");
 </script>
 
@@ -8,7 +9,7 @@ const message = ref("");
   <div class="flex justify-center p-4" id="installationCalculator">
     <h2 class="font-title text-3xl">Cost Estimator</h2>
   </div>
-  <div class="font-main xl:container xl:mx-auto xl:px-44">
+  <div class="pt-6 font-main xl:container xl:mx-auto xl:px-44">
     <div class="container mx-auto flex justify-center px-44">
       <form
         class="flex w-80 flex-col rounded-lg border-2 border-blue-n"
@@ -59,8 +60,8 @@ const message = ref("");
         </div>
       </form>
     </div>
-    <div class="flex p-5 font-main" v-show="showQuote">
-      <div class="basis-1/2 p-5">
+    <div class="flex p-5 pt-10 font-main" v-show="showQuote">
+      <div class="basis-1/2 p-4">
         <div v-show="apiLimit">{{ apiLimit }}</div>
         <div class="text-2xl">Your security system componets are</div>
         <ul class="p-4 text-xl">
@@ -76,7 +77,7 @@ const message = ref("");
         <p class="p-4 pt-3 text-2xl">
           Estimated cost of install: ${{ quote.cost_install }}.00
         </p>
-        <p class="p-2 text-xl">
+        <p class="p-3 pt-10 text-xl">
           Please check out our guides for information on the differnt smart
           ecosystems.
         </p>
@@ -88,31 +89,37 @@ const message = ref("");
           or email and we will contact you.
         </p>
         <form class="" @submit.prevent="putUserInfo">
-          <div class="flex flex-col p-4 pt-3 text-lg">
-            <label>Name: </label>
-            <input
-              type="text"
-              class="rounded-md text-xl"
-              placeholder="Name"
-              v-model="name"
-            />
-          </div>
-          <div class="flex flex-col p-4 pt-3 text-lg">
-            <label>Email: </label>
-            <input
-              class="rounded-md text-xl"
-              type="text"
-              placeholder="example@email.com"
-              v-model="email"
-            />
-          </div>
-          <div class="p-4 pt-3">
-            <label class="text-lg">Phone Number: </label>
-            <MazPhoneNumberInput
-              class=""
-              v-model="phoneNumber"
-              @update="resultsTel = $event.formatNational"
-            />
+          <div class="pr-48">
+            <div class="flex flex-col p-4 pt-3 text-lg">
+              <label class="p-1 pl-2">Name: </label>
+              <MazInput
+                type="text"
+                class=""
+                placeholder="name"
+                v-model="nameInput"
+                v-model:model-value="resultsName"
+              />
+            </div>
+            <div class="flex flex-col p-4 pt-3 text-lg">
+              <label class="p-1 pl-2">Email: </label>
+              <MazInput
+                class=""
+                placeholder="example@email.com"
+                v-model="emailInput"
+                v-model:model-value="resultsEmail"
+                type="email"
+              />
+            </div>
+
+            <div class="p-4 pt-3 text-lg">
+              <label class="p-1 pl-2">Phone Number: </label>
+              <MazPhoneNumberInput
+                class=""
+                v-model="phoneNumber"
+                @update="resultsTel = $event.formatNational"
+                no-example
+              />
+            </div>
           </div>
 
           <div class="flex p-4">
@@ -141,6 +148,8 @@ const showQuote = ref(false);
 const showThankYou = ref(false);
 const quoteCost = ref(1);
 const phoneNumber = ref();
+const emailInput = ref();
+const emailName = ref();
 
 import axios from "axios";
 
@@ -216,11 +225,13 @@ export default {
     },
     async putUserInfo() {
       const resultsTel = ref();
+      const resultsEmail = ref();
+      const resultsName = ref();
       await axios
         .post("https://localhost:7287/api/QuoteInput/", {
           input_id: this.quote.input_id,
-          name: this.name,
-          email: this.email,
+          name: this.resultsName,
+          email: this.resultsEmail,
           phone_number: this.resultsTel,
         })
         .then((response) => (this.quote = response.data));
