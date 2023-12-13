@@ -1,3 +1,10 @@
+<script setup>
+import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+
+const message = ref("");
+</script>
+
 <template>
   <div
     id="guide"
@@ -101,13 +108,28 @@
     <div
       class="grid grid-flow-col grid-cols-4 grid-rows-4 p-9 font-main text-2xl"
     >
-      <div v-show="showGeneral & showLights" class="p-2">Video Doorbell</div>
+      <button
+        @click="$router.push('guides')"
+        v-show="showGeneral & showLights"
+        v-bind:routerVideoDoorbell="true"
+        class="p-2"
+      >
+        Video Doorbell
+      </button>
+
       <div v-show="showCameras & showGeneral & showLights" class="p-2">
         Alarm System
       </div>
-      <div v-show="showCameras & showGeneral & showLights" class="p-2">
+
+      <button
+        @click="$router.push('guides')"
+        v-show="showCameras & showGeneral & showLights"
+        v-bind:routerLock="true"
+        class="p-2"
+      >
         Door Lock
-      </div>
+      </button>
+
       <div v-show="showCameras & showSecurity & showLights" class="p-2">
         Smart Protocol
       </div>
@@ -118,6 +140,15 @@
   </div>
 </template>
 <script>
+const routes = [
+  {
+    path: "guides",
+    props: {
+      routerVideoDoorbell: false,
+      routerLock: false,
+    },
+  },
+];
 export default {
   data() {
     return {

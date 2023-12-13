@@ -1,1 +1,1 @@
-import CalculatorView from '../services/DeviceService.js'
+import CalculatorView from "../services/DeviceService.js";
