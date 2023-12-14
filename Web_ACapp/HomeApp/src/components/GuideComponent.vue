@@ -109,9 +109,12 @@ const message = ref("");
       class="grid grid-flow-col grid-cols-4 grid-rows-4 p-9 font-main text-2xl"
     >
       <button
-        @click="$router.push('guides')"
+        @click="
+          routerLock = false;
+          routerVideoDoorbell = true;
+          $router.push('guides');
+        "
         v-show="showGeneral & showLights"
-        v-bind:routerVideoDoorbell="true"
         class="p-2"
       >
         Video Doorbell
@@ -122,9 +125,12 @@ const message = ref("");
       </div>
 
       <button
-        @click="$router.push('guides')"
+        @click="
+          routerVideoDoorbell = false;
+          routerLock = true;
+          $router.push('guides');
+        "
         v-show="showCameras & showGeneral & showLights"
-        v-bind:routerLock="true"
         class="p-2"
       >
         Door Lock
@@ -140,15 +146,9 @@ const message = ref("");
   </div>
 </template>
 <script>
-const routes = [
-  {
-    path: "guides",
-    props: {
-      routerVideoDoorbell: false,
-      routerLock: false,
-    },
-  },
-];
+// const props = defineProps({ routerVideoDoorbell: false, routerLock: false });
+const routerVideoDoorbell = ref(false);
+const routerLock = ref(false);
 export default {
   data() {
     return {
@@ -157,6 +157,10 @@ export default {
       showLights: true,
       showSecurity: true,
     };
+  },
+  props: {
+    routerLock: routerLock,
+    routerVideoDoorbell: routerVideoDoorbell,
   },
 };
 </script>

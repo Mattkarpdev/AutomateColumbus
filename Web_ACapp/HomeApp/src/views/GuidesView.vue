@@ -2,9 +2,8 @@
 import { ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import DoorbellGuide from "../components/guides/DoorbellGuide.vue";
-import routerVideoDoorbell from "../components/GuideComponent.vue";
+import routerGuide from "../components/GuideComponent.vue";
 import LockGuide from "../components/guides/LockGuide.vue";
-import routerLock from "../components/GuideComponent.vue";
 
 const message = ref("");
 </script>
@@ -12,8 +11,10 @@ const message = ref("");
 <template>
   <body>
     <div class="">
-      <DoorbellGuide v-show="routerVideoDoorbell == true" />
-      <LockGuide v-show="routerLock == true" />
+      {{ routerGuide.props.routerLock
+      }}{{ routerGuide.props.routerVideoDoorbell }}
+      <DoorbellGuide />
+      <LockGuide />
     </div>
   </body>
 </template>
