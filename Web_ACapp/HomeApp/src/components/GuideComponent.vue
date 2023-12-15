@@ -1,3 +1,10 @@
+<script setup>
+import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+
+const message = ref("");
+</script>
+
 <template>
   <div
     id="guide"
@@ -101,13 +108,34 @@
     <div
       class="grid grid-flow-col grid-cols-4 grid-rows-4 p-9 font-main text-2xl"
     >
-      <div v-show="showGeneral & showLights" class="p-2">Video Doorbell</div>
+      <button
+        @click="
+          routerLock = false;
+          routerVideoDoorbell = true;
+          $router.push('guides');
+        "
+        v-show="showGeneral & showLights"
+        class="p-2"
+      >
+        Video Doorbell
+      </button>
+
       <div v-show="showCameras & showGeneral & showLights" class="p-2">
         Alarm System
       </div>
-      <div v-show="showCameras & showGeneral & showLights" class="p-2">
+
+      <button
+        @click="
+          routerVideoDoorbell = false;
+          routerLock = true;
+          $router.push('guides');
+        "
+        v-show="showCameras & showGeneral & showLights"
+        class="p-2"
+      >
         Door Lock
-      </div>
+      </button>
+
       <div v-show="showCameras & showSecurity & showLights" class="p-2">
         Smart Protocol
       </div>
@@ -118,6 +146,9 @@
   </div>
 </template>
 <script>
+// const props = defineProps({ routerVideoDoorbell: false, routerLock: false });
+const routerVideoDoorbell = ref(false);
+const routerLock = ref(false);
 export default {
   data() {
     return {
@@ -126,6 +157,10 @@ export default {
       showLights: true,
       showSecurity: true,
     };
+  },
+  props: {
+    routerLock: routerLock,
+    routerVideoDoorbell: routerVideoDoorbell,
   },
 };
 </script>

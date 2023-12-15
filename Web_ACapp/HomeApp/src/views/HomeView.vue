@@ -3,7 +3,7 @@ import { ref } from "vue";
 import CalculatorComponent from "../components/CalculatorComponent.vue";
 import GuidesComponent from "../components/GuideComponent.vue";
 import NewsComponent from "../components/NewsComponent.vue";
-import DoorbellGuide from "../router/index.js";
+
 import { RouterLink } from "vue-router";
 import NavBarComponent from "../components/NavBarComponent.vue";
 import ContactComponent from "../components/ContactComponent.vue";
