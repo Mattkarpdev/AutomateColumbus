@@ -8,7 +8,7 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), nodePolyfills(), mkcert()],
-
+  assetsInclude: ["**/*.md"],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

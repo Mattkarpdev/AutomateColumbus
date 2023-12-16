@@ -10,8 +10,10 @@
   "dependencies": {
     "axios": "^1.4.0",
     "libphonenumber-js": "^1.10.51",
+    "marked": "^11.1.0",
     "maz-ui": "^3.29.9",
     "vue": "^3.3.4",
+    "vue-markdown-render": "^2.1.1",
     "vue-router": "^4.2.4",
     "vue-rss-feed": "^0.2.4",
     "vue-rss-parser": "^0.1.0"
