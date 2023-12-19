@@ -1,12 +1,4 @@
-<script setup>
-import { computed, ref } from "vue";
-import { RouterLink, RouterView } from "vue-router";
 
-import markdownit from "markdown-it";
-
-const md = markdownit();
-
-const result = md.render(`
 # hi
 
 A brief description of what this project does and who it's for
@@ -138,11 +130,3 @@ https://www.homedepot.com/p/Defiant-Wired-16VAC-30VA-Doorbell-Transformer-Compat
 
 Any additional information goes here
 
-`);
-</script>
-<template>
-  <div v-html="result"></div>
-</template>
-
-<script></script>
-<style></style>
