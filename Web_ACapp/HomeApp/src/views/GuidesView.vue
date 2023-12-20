@@ -18,14 +18,14 @@ const message = ref("");
 </script>
 
 <template>
-  <body>
-    <div
-      class="bg-local bg-center"
-      style="background-image: url(src/assets/Frame13.png)"
-    >
-      <header>
-        <NavBarGuideComponent />
-      </header>
+  <body
+    class="bg-local bg-center"
+    style="background-image: url(src/assets/Frame13.png)"
+  >
+    <header>
+      <NavBarGuideComponent />
+    </header>
+    <main>
       <div :class="mdStyle" class="font-main">
         <div class="">
           {{ routerGuide.props.routerLock }},{{
@@ -35,9 +35,9 @@ const message = ref("");
         </div>
 
         <LockGuide v-show="lockProp" />
-        <div><GuideComponent />></div>
+        <div><GuideComponent /></div>
       </div>
-    </div>
+    </main>
   </body>
 </template>
 <script>
@@ -94,6 +94,7 @@ ul li {
 }
 ul {
   padding-left: 120px;
+  padding-right: 100px;
 }
 p {
   font-size: x-large;
