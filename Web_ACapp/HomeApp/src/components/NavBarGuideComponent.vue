@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div>
     <div class="flex justify-between bg-blue-n">

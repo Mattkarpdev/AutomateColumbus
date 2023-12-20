@@ -1,17 +1,22 @@
 <script setup>
 import { computed, ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
-
+import markdownitanchor from "markdown-it-anchor";
+import markdownittoc from "markdown-it-table-of-contents";
 import markdownit from "markdown-it";
 
-const md = markdownit();
+const md = markdownit({ linkify: true });
+md.use(markdownitanchor).default;
+md.use(markdownittoc);
 
 const result = md.render(`
 
 
 # Video Doorbell Guide
 
-   Video doorbells serve as modern, multifunctional security devices that enhance   home safety and convenience. These devices, typically installed near the entrance of a home, offer real-time video and audio surveillance, allowing homeowners to remotely monitor and interact with visitors through a connected smartphone or tablet. Video doorbells serve as a deterrent to potential intruders, providing a sense of security by capturing motion-triggered footage and sending instant alerts. Beyond security, they facilitate seamless communication with delivery personnel, guests, or neighbors, enabling users to remotely grant access, receive package notifications, and even engage in two-way conversations. With features like night vision, wide-angle lenses, and cloud storage, video doorbells have become integral components of smart home ecosystems, offering a comprehensive solution for both monitoring and managing access to the home.
+[[toc]]
+
+Video doorbells serve as modern, multifunctional security devices that enhance   home safety and convenience. These devices, typically installed near the entrance of a home, offer real-time video and audio surveillance, allowing homeowners to remotely monitor and interact with visitors through a connected smartphone or tablet. Video doorbells serve as a deterrent to potential intruders, providing a sense of security by capturing motion-triggered footage and sending instant alerts. Beyond security, they facilitate seamless communication with delivery personnel, guests, or neighbors, enabling users to remotely grant access, receive package notifications, and even engage in two-way conversations. With features like night vision, wide-angle lenses, and cloud storage, video doorbells have become integral components of smart home ecosystems, offering a comprehensive solution for both monitoring and managing access to the home.
 
 ## Things to Consider 
 
