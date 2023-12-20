@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from "vue-router";
 import DoorbellGuide from "../components/guides/DoorbellGuide.vue";
 import routerGuide from "../components/GuideComponent.vue";
 import LockGuide from "../components/guides/LockGuide.vue";
-import { marked } from "marked";
+
 import markdownit from "markdown-it";
 import NavBarGuideComponent from "../components/NavBarGuideComponent.vue";
 import GuideComponent from "../components/GuideComponent.vue";

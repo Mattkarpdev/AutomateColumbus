@@ -4,11 +4,11 @@ import { RouterLink, RouterView } from "vue-router";
 
 import markdownit from "markdown-it";
 
-const md = markdownit({ linkify: true });
+const md = markdownit();
 
 const result = md.render(`
 
-[link text](battery)
+
 # Video Doorbell Guide
 
    Video doorbells serve as modern, multifunctional security devices that enhance   home safety and convenience. These devices, typically installed near the entrance of a home, offer real-time video and audio surveillance, allowing homeowners to remotely monitor and interact with visitors through a connected smartphone or tablet. Video doorbells serve as a deterrent to potential intruders, providing a sense of security by capturing motion-triggered footage and sending instant alerts. Beyond security, they facilitate seamless communication with delivery personnel, guests, or neighbors, enabling users to remotely grant access, receive package notifications, and even engage in two-way conversations. With features like night vision, wide-angle lenses, and cloud storage, video doorbells have become integral components of smart home ecosystems, offering a comprehensive solution for both monitoring and managing access to the home.
@@ -130,7 +130,7 @@ Always refer to the specific instructions provided by the manufacturer of your v
 
 https://www.homedepot.com/p/Defiant-Wired-16VAC-30VA-Doorbell-Transformer-Compatible-with-all-Video-Doorbells-18000044/322882044
 
-(link text):
+
 ## Battery Video Doorbell Installation
 
 ### Materials for Installation: 

@@ -10,7 +10,8 @@
   "dependencies": {
     "axios": "^1.4.0",
     "libphonenumber-js": "^1.10.51",
-    "markdownit": "12.3.2",
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^8.6.7",
     "marked": "^11.1.0",
     "maz-ui": "^3.29.9",
     "vue": "^3.3.4",

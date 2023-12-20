@@ -25,7 +25,7 @@ import ContactComponent from "../components/ContactComponent.vue";
               <div class="flex h-[508px] w-[1207px] gap-[45px]">
                 <img
                   class="w-[616px] rounded-[25px]"
-                  src="src/assets/DreamShaper_v7_Home_Automation_0.jpg"
+                  src="/src/assets/DreamShaper_v7_Home_Automation_0.jpg"
                 />
                 <div class="flex self-center" style="opacity: 0.9">
                   <h5
