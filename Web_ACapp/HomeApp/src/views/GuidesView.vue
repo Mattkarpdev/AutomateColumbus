@@ -6,24 +6,38 @@ import routerGuide from "../components/GuideComponent.vue";
 import LockGuide from "../components/guides/LockGuide.vue";
 import { marked } from "marked";
 import markdownit from "markdown-it";
-
-import plop from "../components/guides/plop.md";
+import NavBarGuideComponent from "../components/NavBarGuideComponent.vue";
+import GuideComponent from "../components/GuideComponent.vue";
 
 const md = markdownit();
 const result = md.render(`# Happy`);
 
+const doorbellProp = ref(routerGuide.props.routerVideoDoorbell);
+const lockProp = ref(routerGuide.props.routerLock);
 const message = ref("");
 </script>
 
 <template>
-  <body class="bg-transparent">
-    <div class="">
-      {{ routerGuide.props.routerLock
-      }}{{ routerGuide.props.routerVideoDoorbell }}
-      <DoorbellGuide />
-    </div>
-    <div>wiennnnerrrrrrrrrrrrr</div>
-    <LockGuide />
+  <body
+    class="bg-local bg-center"
+    style="background-image: url(src/assets/Frame13.png)"
+  >
+    <header>
+      <NavBarGuideComponent />
+    </header>
+    <main>
+      <div :class="mdStyle" class="font-main">
+        <div class="">
+          {{ routerGuide.props.routerLock }},{{
+            routerGuide.props.routerVideoDoorbell
+          }},
+          <DoorbellGuide v-show="doorbellProp" />
+        </div>
+
+        <LockGuide v-show="lockProp" />
+        <div><GuideComponent /></div>
+      </div>
+    </main>
   </body>
 </template>
 <script>
@@ -31,15 +45,62 @@ export default {
   computed: {},
 };
 </script>
-
 <style>
 h1 {
-  font-size: xx-large;
+  font-size: 62px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-top: 14px;
 }
 h2 {
-  font-size: x-large;
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 h4 {
-  font-size: small;
+  font-size: x-large;
+  padding-left: 50px;
+  padding-left: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+h3 {
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+strong {
+  font-weight: 600;
+}
+ol li {
+  list-style-type: decimal;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+ol {
+  padding-left: 100px;
+}
+ul li {
+  list-style-type: "- ";
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding-right: 100px;
+  padding: 6px;
+}
+ul {
+  padding-left: 120px;
+  padding-right: 100px;
+}
+p {
+  font-size: x-large;
+  flex-wrap: wrap;
+  padding: 16px;
+  padding-right: 100px;
+  padding-left: 50px;
 }
 </style>

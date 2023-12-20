@@ -162,6 +162,7 @@ export default {
     routerLock: routerLock,
     routerVideoDoorbell: routerVideoDoorbell,
   },
+  methods: {},
 };
 </script>
 
