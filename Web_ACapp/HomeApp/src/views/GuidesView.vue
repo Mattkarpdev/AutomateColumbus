@@ -56,6 +56,13 @@ h2 {
   font-size: xx-large;
   font-weight: bold;
   padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 14px;
+}
+h3 {
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 50px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
@@ -66,13 +73,13 @@ h4 {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-h3 {
-  font-size: x-large;
+h6 {
+  font-size: xx-large;
   font-weight: bold;
   padding-left: 50px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 40px;
 }
+
 strong {
   font-weight: 600;
 }
