@@ -16,14 +16,12 @@
         <div class="p-2 text-3xl text-white">Columbus</div> -->
       </div>
       <nav class="flex">
-        <ul class="flex snap-y items-center font-title text-2xl text-white/90">
-          <li><a class="p-3" href="#news">News</a></li>
-          <li><a class="p-3" href="#guide">Guides</a></li>
+        <div class="flex snap-y items-center font-title text-2xl text-white/90">
+          <a class="p-3" href="#news">News</a>
+          <a class="p-3" href="#guide">Guides</a>
 
-          <li>
-            <a class="p-3" href="#installationCalculator">Cost Estimator</a>
-          </li>
-        </ul>
+          <a class="p-3" href="#installationCalculator">Cost Estimator</a>
+        </div>
       </nav>
     </div>
   </div>
