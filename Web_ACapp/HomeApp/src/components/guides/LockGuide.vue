@@ -1,58 +1,122 @@
+<script setup>
+import { computed, ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import markdownitanchor from "markdown-it-anchor";
+import markdownittoc from "markdown-it-table-of-contents";
+import markdownit from "markdown-it";
+
+const md = markdownit({ linkify: true });
+md.use(markdownitanchor).default;
+md.use(markdownittoc, { includeLevel: [2, 3] });
+
+const result = md.render(`
+
+
+# Door Lock Guide
+
+Smart door locks offer a sophisticated and secure alternative to traditional lock-and-key systems by integrating advanced technology into home security. These locks, often accessible through mobile apps, provide users with remote control over their doors, allowing for keyless entry and exit. The advantages of smart door locks include enhanced convenience through features like temporary access codes for guests, real-time monitoring of lock status, and the ability to receive alerts or notifications on mobile devices. Many smart locks also integrate with popular smart home platforms, enabling seamless automation and voice control. The increased level of control, coupled with advanced security features like encryption and tamper alerts, makes smart door locks a modern and reliable choice for homeowners seeking a more flexible and robust approach to home access control.
+
+###### Guide Contents
+
+[[toc]]
+
+## Things to Consider 
+
+
+
+1. Door Alignment
+  - If the door doesnt look easily or the door frame has shifted in a way that effects the funtionality of the door, this will need to be fixed before even considering a motorized smart lock.
+
+1. Compatibility
+  - Ensure that the smart door lock is compatible with your door type and size. Verify if it works with your existing deadbolt or if you need to replace it.
+
+2. Smart Home Integration
+  - Check if the smart lock integrates with your existing smart home ecosystem, such as Alexa, Google Assistant, or Apple HomeKit.
+
+3. Power Source
+  - Determine the power source of the smart lock. Some operate on batteries, while others may have a wired connection. Consider battery life and the ease of replacement.
+
+4. Security Features
+  - Review the security features of the smart lock, such as encryption, tamper alerts, and anti-pick shields. Choose a lock with robust security measures.
+
+5. Mobile App Compatibility
+  - Ensure that the lock's mobile app is compatible with your smartphone or tablet. Check if it offers the features you desire, such as remote monitoring, lock/unlock history, and user management.
+
+6. User Access and Control
+  - Consider how the smart lock handles user access. Look for features like customizable user codes, guest temporary access, and the ability to revoke access remotely.
+
+
+7. Physical Keypad
+  - If the smart lock includes a physical keypad, evaluate its design, durability, and ease of use. Keypads can be convenient for keyless entry.
+
+8. Wi-Fi Connectivity
+  - Determine if the smart lock connects to your Wi-Fi network. This feature is essential for remote access and control when you're away from home.
+
+
+9. Locking Mechanism
+  - Understand the type of locking mechanism the smart lock uses. Some may have motorized deadbolts, while others work with your existing deadbolt.
+
+
+10. Backup Options
+  - Check if the smart lock provides backup options, such as a physical key or alternative access methods, in case of electronic malfunctions.
+
+
+## Smart Door Lock Installation 
+
+### Materials for Installation:
+
+  - Smart door lock kit
+  - Screwdriver
+  - Drill (if necessary)
+  - Smartphone or tablet for setup
+
+
+### Installation Steps: 
+
+
+
+1. Remove Existing Lock
+  - Start by removing your existing door lock and deadbolt. Follow the manufacturer's instructions for disassembling the old hardware.
+
+2. Prepare the Door
+  - Ensure the door is clean and free from any debris. Measure and mark the correct positions for the new lock on the door, making sure it aligns with the existing holes.
+
+3. Install the Latch and Deadbolt
+  - Install the latch and deadbolt components into the door, following the instructions provided. Secure them in place with screws.
+
+4. Attach the Exterior Assembly
+  - Place the exterior assembly of the smart lock on the outside of the door. Align it with the pre-drilled holes and secure it using the provided screws.
+
+5. Connect Interior Assembly
+  - Attach the interior assembly on the inside of the door. Align it with the exterior assembly and secure it with screws.
+
+
+
+6. Insert Batteries
+  - If your smart lock operates on batteries, insert them according to the manufacturer's instructions. Ensure the polarity is correct.
+
+7. Pair with Mobile App
+  - Download and open the mobile app associated with your smart lock. Follow the app's instructions to pair the lock with your smartphone. This may involve scanning a QR code or entering a pairing code.
+
+
+
+8. Test the Lock
+  - Perform a series of tests to ensure the lock operates smoothly. Check if it responds to commands from the app, try using the keypad or other access methods, and confirm that the door locks and unlocks correctly.
+
+9. Secure Any Additional Components
+  - If your smart lock comes with additional components, such as a door sensor or strike plate, secure them according to the manufacturer's instructions.
+
+
+
+Remember to follow the specific installation instructions provided by the manufacturer of your smart door lock, as different models may have unique requirements and features. If you are uncertain or uncomfortable with any step, consider seeking professional assistance for installation.
+
+
+
+
+
+`);
+</script>
 <template>
-  <p class="bg-primary text-wrap">
-    # Ring Alarm System Installation Guide Congratulations on your purchase of
-    the Ring Alarm System! This guide will walk you through the installation
-    process to help you set up your home security system quickly and
-    effectively. Please read through the instructions carefully before you
-    begin. ## Table of Contents 1. **Before You Begin** - Gather Required Items
-    - Review the System Components 2. **Installation Steps** - Step 1: Setup the
-    Base Station - Step 2: Install Sensors - Step 3: Configure the Keypad - Step
-    4: Connect to the Ring App 3. **Troubleshooting Tips** - Common Issues -
-    Technical Support ## 1. Before You Begin ### Gather Required Items: Before
-    you start, make sure you have the following items ready: - Ring Alarm Base
-    Station - Contact Sensors (for doors and windows) - Motion Sensors
-    (optional) - Keypad - Ethernet cable (included) - Power adapter and cable
-    (included) - Your Wi-Fi network credentials - A smartphone or tablet with
-    the Ring app installed ### Review the System Components: Take a moment to
-    familiarize yourself with the components of your Ring Alarm System: - **Base
-    Station**: The central hub that connects all your sensors and communicates
-    with the Ring app. - **Contact Sensors**: Used to monitor doors and windows.
-    - **Motion Sensors**: Detect motion within a specific area (optional). -
-    **Keypad**: Allows you to arm and disarm your alarm system. - **Ring App**:
-    Enables remote control and monitoring of your system. ## 2. Installation
-    Steps Follow these steps to install your Ring Alarm System: ### Step 1: Set
-    up the Base Station 1. Choose a central location in your home for the Base
-    Station. It should be near a power outlet and your internet router. 2. Plug
-    in the Base Station using the provided power adapter and cable. 3. Connect
-    the Base Station to your router using the included Ethernet cable. 4. Wait
-    for the LED on the Base Station to turn blue, indicating it's connected to
-    the internet. ### Step 2: Install Sensors 1. Peel off the adhesive backing
-    from the Contact Sensors and attach them to doors and windows. Ensure they
-    align properly. 2. If you have Motion Sensors, place them in strategic
-    locations within your home, following the installation instructions in the
-    manual. 3. Activate each sensor using the Ring app. ### Step 3: Configure
-    the Keypad 1. Insert the provided batteries into the Keypad. 2. Mount the
-    Keypad on a wall near your main entry/exit point using the included mounting
-    bracket. 3. Follow the instructions in the Ring app to pair the Keypad with
-    the Base Station. 4. Customize your security codes and test the Keypad's
-    functionality. ### Step 4: Connect to the Ring App 1. Download and open the
-    Ring app on your smartphone or tablet. 2. Create a Ring account if you don't
-    already have one. 3. Follow the in-app instructions to set up your Ring
-    Alarm System, including naming sensors and configuring settings. 4. Test the
-    system by arming and disarming it through the app. ## 3. Troubleshooting
-    Tips ### Common Issues: - If sensors are not connecting to the Base Station,
-    ensure they are within the recommended range and not obstructed by metal
-    objects. - For connectivity issues, check your Wi-Fi and internet
-    connection. - Ensure you have correctly entered Wi-Fi credentials during
-    setup. - If you encounter issues with the app or system, consult the Ring
-    website's FAQ section. ### Technical Support: If you require further
-    assistance or encounter technical difficulties during installation, refer to
-    the Ring Alarm System user manual for detailed troubleshooting steps. You
-    can also contact Ring's customer support for help. Enjoy the peace of mind
-    that comes with your Ring Alarm System. Your home is now equipped with a
-    reliable security solution that helps protect your loved ones and
-    belongings. [Ring Customer Support](https://support.ring.com/hc/en-us) This
-    concludes the installation guide for your Ring Alarm System. Thank you for
-    choosing Ring to safeguard your home! -- chat.openai.com
-  </p>
+  <div v-html="result"></div>
 </template>
+<style></style>

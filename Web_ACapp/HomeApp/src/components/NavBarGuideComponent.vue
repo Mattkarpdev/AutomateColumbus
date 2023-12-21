@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div>
     <div class="flex justify-between bg-blue-n">
@@ -5,7 +6,7 @@
         <div>
           <img
             class="h-20 object-contain p-0"
-            src="src/assets/LogoAC.png"
+            src="../assets/LogoAC.png"
             alt=""
           />
         </div>

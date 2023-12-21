@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from "vue-router";
 import DoorbellGuide from "../components/guides/DoorbellGuide.vue";
 import routerGuide from "../components/GuideComponent.vue";
 import LockGuide from "../components/guides/LockGuide.vue";
-import { marked } from "marked";
+
 import markdownit from "markdown-it";
 import NavBarGuideComponent from "../components/NavBarGuideComponent.vue";
 import GuideComponent from "../components/GuideComponent.vue";
@@ -56,6 +56,13 @@ h2 {
   font-size: xx-large;
   font-weight: bold;
   padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 14px;
+}
+h3 {
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 50px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
@@ -66,13 +73,13 @@ h4 {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-h3 {
-  font-size: x-large;
+h6 {
+  font-size: xx-large;
   font-weight: bold;
   padding-left: 50px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 40px;
 }
+
 strong {
   font-weight: 600;
 }
