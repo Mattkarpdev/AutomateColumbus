@@ -66,8 +66,8 @@ Video doorbells serve as modern, multifunctional security devices that enhance  
 
 3.  Check Compatibility
    - Verify that the existing transformer is compatible with the voltage requirements of your video doorbell. If it falls within the specified range, it may be suitable.
-   - If it doesn't fall within the range, refer to swapping doorbell transformer.
-   - https://www.homedepot.com/p/Defiant-Wired-16VAC-30VA-Doorbell-Transformer-Compatible-with-all-Video-Doorbells-18000044/322882044
+   - If it doesn't fall within the range, refer to swapping doorbell transformer.[link](https://www.homedepot.com/p/Defiant-Wired-16VAC-30VA-Doorbell-Transformer-Compatible-with-all-Video-Doorbells-18000044/322882044)
+
 
 ###  Swapping Doorbell Transformer: 
 
