@@ -4,16 +4,23 @@ import { RouterLink, RouterView } from "vue-router";
 import DoorbellGuide from "../components/guides/DoorbellGuide.vue";
 import routerGuide from "../components/GuideComponent.vue";
 import LockGuide from "../components/guides/LockGuide.vue";
-
+import AlarmGuide from "../components/guides/AlarmGuide.vue";
+import ProtocolGuide from "../components/guides/ProtocolGuide.vue";
+import EcosystemGuide from "../components/guides/EcosystemGuide.vue";
 import markdownit from "markdown-it";
 import NavBarGuideComponent from "../components/NavBarGuideComponent.vue";
 import GuideComponent from "../components/GuideComponent.vue";
+
+import router from "../router";
 
 const md = markdownit();
 const result = md.render(`# Happy`);
 
 const doorbellProp = ref(routerGuide.props.routerVideoDoorbell);
 const lockProp = ref(routerGuide.props.routerLock);
+const alarmProp = ref(routerGuide.props.routerAlarm);
+const protocolProp = ref(routerGuide.props.routerProtocol);
+const ecosystemProp = ref(routerGuide.props.routerEcosystem);
 const message = ref("");
 </script>
 
@@ -30,11 +37,16 @@ const message = ref("");
         <div class="">
           {{ routerGuide.props.routerLock }},{{
             routerGuide.props.routerVideoDoorbell
-          }},
+          }},{{ routerGuide.props.routerAlarm }},{{
+            routerGuide.props.routerEcosystem
+          }},{{ routerGuide.props.routerProtocol }},
           <DoorbellGuide v-show="doorbellProp" />
         </div>
 
         <LockGuide v-show="lockProp" />
+        <AlarmGuide v-show="alarmProp" />
+        <EcosystemGuide v-show="ecosystemProp" />
+        <ProtocolGuide v-show="protocolProp" />
         <div><GuideComponent /></div>
       </div>
     </main>

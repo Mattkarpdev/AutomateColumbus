@@ -110,38 +110,78 @@ const message = ref("");
     >
       <button
         @click="
+          routerEcosystem = false;
+          routerProtocol = false;
           routerLock = false;
           routerVideoDoorbell = true;
+          routerAlarm = false;
           $router.push('guides');
         "
         v-show="showGeneral & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Video Doorbell
       </button>
 
-      <div v-show="showCameras & showGeneral & showLights" class="p-2">
+      <button
+        @click="
+          routerEcosystem = false;
+          routerProtocol = false;
+          routerAlarm = true;
+          routerLock = false;
+          routerVideoDoorbell = false;
+          $router.push('guides');
+        "
+        v-show="showCameras & showGeneral & showLights"
+        class="p-2 hover:scale-110"
+      >
         Alarm System
-      </div>
+      </button>
 
       <button
         @click="
+          routerEcosystem = false;
+          routerProtocol = false;
           routerVideoDoorbell = false;
+          routerAlarm = false;
           routerLock = true;
           $router.push('guides');
         "
         v-show="showCameras & showGeneral & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Door Lock
       </button>
 
-      <div v-show="showCameras & showSecurity & showLights" class="p-2">
-        Smart Protocol
-      </div>
-      <div v-show="showCameras & showSecurity & showLights" class="p-2">
+      <button
+        @click="
+          routerEcosystem = false;
+          routerProtocol = true;
+          routerVideoDoorbell = false;
+          routerAlarm = false;
+          routerLock = false;
+          $router.push('guides');
+        "
+        v-show="showCameras & showSecurity & showLights"
+        class="p-2 hover:scale-110"
+      >
+        Smart Protocols
+      </button>
+
+      <button
+        @click="
+          routerEcosystem = true;
+          routerProtocol = false;
+          routerVideoDoorbell = false;
+          routerAlarm = false;
+          routerLock = false;
+          $router.push('guides');
+        "
+        v-show="showCameras & showSecurity & showLights"
+        class="p-2 hover:scale-110"
+      >
         Smart Ecosystems
-      </div>
+      </button>
     </div>
   </div>
 </template>
@@ -149,6 +189,9 @@ const message = ref("");
 // const props = defineProps({ routerVideoDoorbell: false, routerLock: false });
 const routerVideoDoorbell = ref(false);
 const routerLock = ref(false);
+const routerAlarm = ref(false);
+const routerEcosystem = ref(false);
+const routerProtocol = ref(false);
 export default {
   data() {
     return {
@@ -161,63 +204,10 @@ export default {
   props: {
     routerLock: routerLock,
     routerVideoDoorbell: routerVideoDoorbell,
+    routerAlarm: routerAlarm,
+    routerEcosystem: routerEcosystem,
+    routerProtocol: routerProtocol,
   },
   methods: {},
 };
 </script>
-
-<!-- <div>
-        <div class="p-2">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/09/LG-RING-DOORBELL-COMP.jpg?w=1280&quality=44"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="text-3xl font-bold underline">Video Doorbell</h5>
-              <p class="card-text">
-                Video doorbells have bad picture, amazon needs to make them
-                better.
-              </p>
-              <RouterLink to="/guides/doorbellguide" class="btn btn-primary"
-                >Go somewhere
-              </RouterLink>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-2">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://cdn.idealo.com/folder/Product/201534/5/201534593/s3_produktbild_max/ring-alarm-kit-2nd-gen.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="p-2" id="guide">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://u-tec.com/cdn/shop/t/57/assets/sence-banner.png?v=175755877485102375081689760851"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div> -->
