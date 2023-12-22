@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-row justify-center p-5" id="news">
-    <h2 class="p-3 font-title text-3xl">News</h2>
+  <div class="flex flex-row justify-center p-5 px-44 pb-1 pt-14" id="news">
+    <div class="pt-3 font-title text-3xl">News</div>
   </div>
   <div>
     <VueRssFeed

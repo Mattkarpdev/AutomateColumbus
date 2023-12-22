@@ -6,10 +6,10 @@ const message = ref("");
 </script>
 
 <template>
-  <div class="flex justify-center p-4" id="installationCalculator">
-    <h2 class="font-title text-3xl">Cost Estimator</h2>
+  <div class="flex justify-center pt-8" id="installationCalculator">
+    <div class="px-44 font-title text-3xl">Cost Estimator</div>
   </div>
-  <div class="pt-6 font-main xl:container xl:mx-auto xl:px-44">
+  <div class="pb-6 pt-8 font-main xl:container xl:mx-auto xl:px-44">
     <div class="container mx-auto flex justify-center px-44">
       <form
         class="flex w-80 flex-col rounded-lg border-2 border-blue-n"

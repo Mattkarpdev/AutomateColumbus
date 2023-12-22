@@ -22,7 +22,7 @@ import ContactComponent from "../components/ContactComponent.vue";
         <main class="">
           <section class="p-10">
             <div class="flex justify-center self-center">
-              <div class="flex h-[508px] w-[1207px] gap-[45px]">
+              <div class="flex h-[508px] w-[1207px] gap-[45px] pt-10">
                 <img
                   class="w-[616px] rounded-[25px]"
                   src="/src/assets/DreamShaper_v7_Home_Automation_0.jpg"
@@ -43,21 +43,17 @@ import ContactComponent from "../components/ContactComponent.vue";
             </div>
           </section>
           <div>
-            <h2></h2>
             <NewsComponent />
           </div>
           <div>
-            <h2></h2>
             <GuidesComponent />
           </div>
 
-          <div class="d-flex justify-content-center p-5">
-            <h2></h2>
+          <div class="">
             <CalculatorComponent />
           </div>
 
           <div id="contactComponent" class="d-flex justify-content-center pt-5">
-            <h2></h2>
             <ContactComponent />
           </div>
         </main>
