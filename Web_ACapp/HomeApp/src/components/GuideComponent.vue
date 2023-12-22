@@ -118,7 +118,7 @@ const message = ref("");
           $router.push('guides');
         "
         v-show="showGeneral & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Video Doorbell
       </button>
@@ -133,7 +133,7 @@ const message = ref("");
           $router.push('guides');
         "
         v-show="showCameras & showGeneral & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Alarm System
       </button>
@@ -148,7 +148,7 @@ const message = ref("");
           $router.push('guides');
         "
         v-show="showCameras & showGeneral & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Door Lock
       </button>
@@ -163,7 +163,7 @@ const message = ref("");
           $router.push('guides');
         "
         v-show="showCameras & showSecurity & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Smart Protocols
       </button>
@@ -178,7 +178,7 @@ const message = ref("");
           $router.push('guides');
         "
         v-show="showCameras & showSecurity & showLights"
-        class="p-2"
+        class="p-2 hover:scale-110"
       >
         Smart Ecosystems
       </button>
