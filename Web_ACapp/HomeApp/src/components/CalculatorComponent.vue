@@ -149,7 +149,7 @@ const showThankYou = ref(false);
 const quoteCost = ref(1);
 const phoneNumber = ref();
 const emailInput = ref();
-const emailName = ref();
+const nameInput = ref();
 
 import axios from "axios";
 

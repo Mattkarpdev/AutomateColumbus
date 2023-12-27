@@ -35,11 +35,6 @@ const message = ref("");
     <main>
       <div :class="mdStyle" class="font-main">
         <div class="">
-          {{ routerGuide.props.routerLock }},{{
-            routerGuide.props.routerVideoDoorbell
-          }},{{ routerGuide.props.routerAlarm }},{{
-            routerGuide.props.routerEcosystem
-          }},{{ routerGuide.props.routerProtocol }},
           <DoorbellGuide v-show="doorbellProp" />
         </div>
 
