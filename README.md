@@ -43,6 +43,6 @@ Unlock the full potential of your smart home devices with our detailed guides. W
 Plan your smart home budget with our intuitive cost estimator. Customize your setup and get an instant cost breakdown.
 
 - Cost are calculated using sql triggers.
-- Equimpment and Contact info are saved to database, tied together with an input ID.
+- Equipment and Contact info are saved to database, tied together with an input ID.
 
 ![hhjhj](images/CostEstimator.png)
